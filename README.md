@@ -113,21 +113,21 @@ issues贡献： 如在使用中遇到问题，请在 https://github.com/baidu/op
 
 
 
+## 版本更新
+- 1.0.0 openless第一版发布，具备常用的函数管控、容器管理和调度、事件机制等功能；
+
+
 ## 讨论
 
 如果您有任何意见或问题都可以提issue到github或gitee，我们将及时为您解答。
 
 如在使用中遇到问题，快速沟通，可微信扫描二维码，加入openless技术交流群，添加下列管理员微信，并备注“openless”，管理员邀您入群
 
-<img src="./docs/imgs/fangliying.JPG" width="200" align=left>
-
 <img src="./docs/imgs/shinansheng.jpg" width="200" align="left">
-
-您也可以加入百度如流讨论群直接参与讨论和提问：4222853
-
+<img src="./docs/imgs/fangliying.JPG" width="200" align="left">
 
 
-## 版本更新
 
-- 1.0.0 openless第一版发布，具备常用的函数管控、容器管理和调度、事件机制等功能；
+
+
 
