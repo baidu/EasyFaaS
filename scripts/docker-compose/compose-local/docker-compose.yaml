@@ -1,0 +1,80 @@
+version: '2.0'
+services:
+  openless:
+    image: ${OPENLESS_REPO}/controller:${CONTROLLER_TAG}
+    network_mode: host
+    command:
+    - ./controller
+    - --maxprocs=10
+    - --port=${CONTROLLER_EXPORT_PORT}
+    - --repository-endpoint=http://127.0.0.1:${REGISTRY_EXPORT_PORT}
+    - --repository-version=v1
+    - --repository-auth-type=noauth
+    - --logtostderr=true
+    - --http-enhanced=true
+    - -v0
+    depends_on:
+    - funclet
+    volumes:
+    - run:/var/run/faas
+    restart: always
+  funclet:
+    image: ${OPENLESS_REPO}/mini-funclet:${FUNCLET_TAG}
+    network_mode: host
+    privileged: true
+    command:
+    - ./funclet
+    - --logtostderr=true
+    - --reserved-memory=100M
+    - --reserved-cpu=0.3
+    - --runner-memory=128M
+    - --container-num=20
+    - -v10
+    depends_on:
+    - runtime
+    volumes:
+    - run:/var/run/faas
+    - runtime:/var/faas/runtime
+    - rootfs:/var/faas/runner
+    - data:/var/faas/runner-data
+    - func:/var/faas/funcData
+  runtime:
+    image: ${OPENLESS_REPO}/runner-runtime:${RUNTIME_TAG}
+    network_mode: none
+    command:
+    - /bin/bash
+    - /update.sh
+    volumes:
+    - runtime:/var/faas/runtime
+    - rootfs:/var/faas/runner
+    environment:
+      RUNNING_MODE: ote
+      DAEMONSET: "0"
+      WITHNODEJS8: "1"
+      WITHNODEJS10: "1"
+      WITHNODEJS12: "1"
+      WITHPYTHON2: "1"
+      WITHPYTHON3: "1"
+      WITHJAVA8: "1"
+      WITHRUNNER: "1"
+  registry:
+    image: ${OPENLESS_REPO}/func-registry:${REGISTRY_TAG}
+    network_mode: host
+    command:
+    - /stubs
+    - --port=${REGISTRY_EXPORT_PORT}
+    - --function-dir=/var/faas/funcData
+    - --logtostderr
+    volumes:
+    - func:/var/faas/funcData
+volumes:
+  run:
+  runtime:
+  rootfs:
+  data:
+  func:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ${FUNCTION_DATA_DIR}

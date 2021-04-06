@@ -1,0 +1,20 @@
+language: go
+go_import_path: github.com/baidu/openless
+
+sudo: false
+
+go:
+  - 1.16
+
+before_install:
+  - go get -v honnef.co/go/tools/...
+  - go get -v github.com/kisielk/errcheck
+
+script:
+  - make fmt
+  - make test
+  - make race
+# - make errcheck
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

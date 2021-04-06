@@ -1,15 +1,53 @@
 # Binaries for programs and plugins
 *.exe
-*.exe~
 *.dll
 *.so
 *.dylib
 
-# Test binary, built with `go test -c`
+# Test binary, build with `go test -c`
 *.test
 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
 
-# Dependency directories (remove the comment below to include it)
-# vendor/
+# Project-local glide cache, RE: https://github.com/Masterminds/glide/issues/736
+.glide/
+
+# Logs
+./logs
+
+# Mac
+
+.DS_Store
+
+.vscode
+.idea
+.tmp
+*.iml
+
+_output
+output
+scripts/funclet/docker/nsmount
+.dockerized-kun-version-defs
+funclet.sh
+cmd/cli/cli
+node_modules/
+venv/
+post.lua
+whitelist
+
+tags
+log/
+
+rootfs
+*.tgz
+cmd/controller/controller
+cmd/funclet/funclet
+scripts/funclet/docker/funclet
+scripts/controller/docker/controller
+scripts/controller/docker/cli
+scripts/stubs/docker/stubs
+scripts/allInOne/docker/stubs
+scripts/allInOne/docker/funclet
+scripts/allInOne/docker/httptrigger
+scripts/allInOne/docker/controller
