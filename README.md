@@ -1,4 +1,4 @@
-# OpenLess
+# FaaSter
 
 [![License](https://img.shields.io/badge/Licence-Apache%202.0-blue.svg?style=flat-square)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
@@ -6,15 +6,15 @@
 
 ## 简介
 
-OpenLess是一个依赖轻、适配性强、资源占用少、无状态且高性能的函数计算服务引擎。它有以下几个特点：
+FaaSter是一个依赖轻、适配性强、资源占用少、无状态且高性能的函数计算服务引擎。它有以下几个特点：
 
-- **依赖轻**：OpenLess只依赖Linux内核，不强制依赖Docker、Kubernetes等外部服务
+- **依赖轻**：FaaSter只依赖Linux内核，不强制依赖Docker、Kubernetes等外部服务
 
-- **适配性强**：OpenLess可以运行在多种系统环境，包括Docker、Kubernetes及裸机等
+- **适配性强**：FaaSter可以运行在多种系统环境，包括Docker、Kubernetes及裸机等
 
 - **资源占用少**：模块少，服务系统模块占用更小
 
-- **无状态**：每个OpenLess Pod本身无状态且内部自治
+- **无状态**：每个FaaSter Pod本身无状态且内部自治
 
 - **高性能**：调度链路更短，更小的系统开销和更优的性能
 
