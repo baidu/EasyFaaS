@@ -68,7 +68,7 @@ FaaSter是一个依赖轻、适配性强、资源占用少、无状态且高性�
 ### 架构图
 
 ![openless_arch](docs/imgs/openless_arch.JPG)
-OpenLess以单Pod为最小服务单位，每个Pod中包含3个容器，分别为controller、funclet和runner-runtime。其中runner-runtime仅为init容器，准备必要的资源后即退出。
+FaaSter以单Pod为最小服务单位，每个Pod中包含3个容器，分别为controller、funclet和runner-runtime。其中runner-runtime仅为init容器，准备必要的资源后即退出。
 
 ### 模块说明
 #### 1. 核心组件
@@ -112,7 +112,7 @@ OpenLess以单Pod为最小服务单位，每个Pod中包含3个容器，分别�
 
 ## 贡献
 
-issues贡献： 如在使用中遇到问题，请在 https://github.com/baidu/openless/issues 新建 issues 反馈问题。
+issues贡献： 如在使用中遇到问题，请在 https://github.com/baidu/faaster/issues 新建 issues 反馈问题。
 
 
 
@@ -134,7 +134,7 @@ issues贡献： 如在使用中遇到问题，请在 https://github.com/baidu/op
 
 如果您有任何意见或问题都可以提issue到github或gitee，我们将及时为您解答。
 
-如在使用中遇到问题，快速沟通，可微信扫描二维码，加入openless技术交流群，添加下列管理员微信，并备注“openless”，管理员邀您入群
+如在使用中遇到问题，快速沟通，可微信扫描二维码，加入faaster技术交流群，添加下列管理员微信，并备注“faaster”，管理员邀您入群
 
 <img src="./docs/imgs/shinansheng.jpg" width="200" align="left">
 <img src="./docs/imgs/fangliying.JPG" width="200" align="left">
