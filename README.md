@@ -1,19 +1,19 @@
-# FaaSter
+# EasyFaaS
 [![License](https://img.shields.io/badge/Licence-Apache%202.0-blue.svg?style=flat-square)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
 
 
 ## 简介
 
-FaaSter是一个依赖轻、适配性强、资源占用少、无状态且高性能的函数计算服务引擎。它有以下几个特点：
+EasyFaaS是一个依赖轻、适配性强、资源占用少、无状态且高性能的函数计算服务引擎。它有以下几个特点：
 
-- **依赖轻**：FaaSter只依赖Linux内核，不强制依赖Docker、Kubernetes等外部服务
+- **依赖轻**：EasyFaaS只依赖Linux内核，不强制依赖Docker、Kubernetes等外部服务
 
-- **适配性强**：FaaSter可以运行在多种系统环境，包括Docker、Kubernetes及裸机等
+- **适配性强**：EasyFaaS可以运行在多种系统环境，包括Docker、Kubernetes及裸机等
 
 - **资源占用少**：模块少，服务系统模块占用更小
 
-- **无状态**：每个FaaSter Pod本身无状态且内部自治
+- **无状态**：每个EasyFaaS Pod本身无状态且内部自治
 
 - **高性能**：调度链路更短，更小的系统开销和更优的性能
 
@@ -43,7 +43,7 @@ FaaSter是一个依赖轻、适配性强、资源占用少、无状态且高性�
 
 
 ## 核心功能
-![faaster_func](docs/imgs/faaster_function_diagram.JPG)
+![easyfaas_func](docs/imgs/easyfaas_function_diagram.JPG)
 
 - 提供基于事件机制，按需弹性伸缩的计算能力。
 
@@ -67,7 +67,7 @@ FaaSter是一个依赖轻、适配性强、资源占用少、无状态且高性�
 ### 架构图
 
 ![faaster_arch](docs/imgs/faaster_arch.JPG)
-FaaSter以单Pod为最小服务单位，每个Pod中包含3个容器，分别为controller、funclet和runner-runtime。其中runner-runtime仅为init容器，准备必要的资源后即退出。
+EasyFaaS以单Pod为最小服务单位，每个Pod中包含3个容器，分别为controller、funclet和runner-runtime。其中runner-runtime仅为init容器，准备必要的资源后即退出。
 
 ### 模块说明
 #### 1. 核心组件
@@ -111,7 +111,7 @@ FaaSter以单Pod为最小服务单位，每个Pod中包含3个容器，分别为
 
 ## 贡献
 
-issues贡献： 如在使用中遇到问题，请在 https://github.com/baidu/faaster/issues 新建 issues 反馈问题。
+issues贡献： 如在使用中遇到问题，请在 https://github.com/baidu/easyfaas/issues 新建 issues 反馈问题。
 
 
 
@@ -126,14 +126,14 @@ issues贡献： 如在使用中遇到问题，请在 https://github.com/baidu/fa
 
 
 ## 版本更新
-- 1.0.0 faaster第一版发布，具备常用的函数管控、容器管理和调度、事件机制等功能；
+- 1.0.0 easyfaas第一版发布，具备常用的函数管控、容器管理和调度、事件机制等功能；
 
 
 ## 讨论
 
 如果您有任何意见或问题都可以提issue到github或gitee，我们将及时为您解答。
 
-如在使用中遇到问题，快速沟通，可微信扫描二维码，加入faaster技术交流群，添加下列管理员微信，并备注“faaster”，管理员邀您入群
+如在使用中遇到问题，快速沟通，可微信扫描二维码，加入faaster技术交流群，添加下列管理员微信，并备注“easyfaas”，管理员邀您入群
 
 <img src="./docs/imgs/shinansheng.jpg" width="200" align="left">
 <img src="./docs/imgs/fangliying.JPG" width="200" align="left">
