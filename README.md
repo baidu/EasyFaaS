@@ -133,7 +133,7 @@ issues贡献： 如在使用中遇到问题，请在 https://github.com/baidu/ea
 
 如果您有任何意见或问题都可以提issue到github或gitee，我们将及时为您解答。
 
-如在使用中遇到问题，快速沟通，可微信扫描二维码，加入faaster技术交流群，添加下列管理员微信，并备注“easyfaas”，管理员邀您入群
+如在使用中遇到问题，快速沟通，可微信扫描二维码，加入EasyFaaS技术交流群，添加下列管理员微信，并备注“easyfaas”，管理员邀您入群
 
 <img src="./docs/imgs/shinansheng.jpg" width="200" align="left">
 <img src="./docs/imgs/fangliying.JPG" width="200" align="left">
