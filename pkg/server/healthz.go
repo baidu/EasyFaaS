@@ -19,7 +19,7 @@ package server
 import (
 	"fmt"
 
-	"github.com/baidu/openless/pkg/server/healthz"
+	"github.com/baidu/easyfaas/pkg/server/healthz"
 )
 
 // AddHealthzChecks allows you to add a HealthzCheck.

@@ -27,11 +27,11 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/baidu/openless/pkg/funclet/tmp"
+	"github.com/baidu/easyfaas/pkg/funclet/tmp"
 
-	"github.com/baidu/openless/cmd/funclet/options"
-	"github.com/baidu/openless/pkg/funclet/file"
-	"github.com/baidu/openless/pkg/util/logs"
+	"github.com/baidu/easyfaas/cmd/funclet/options"
+	"github.com/baidu/easyfaas/pkg/funclet/file"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 )
 
 func GetPathConfig(o *options.FuncletOptions) *file.PathConfig {

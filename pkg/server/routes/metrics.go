@@ -18,7 +18,7 @@ package routes
 
 import (
 	"github.com/prometheus/client_golang/prometheus/promhttp"
-	"github.com/baidu/openless/pkg/server/mux"
+	"github.com/baidu/easyfaas/pkg/server/mux"
 )
 
 // DefaultMetrics installs the default prometheus metrics handler

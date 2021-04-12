@@ -17,7 +17,7 @@
 readonly ORIGIN_GOPATH="${GOPATH:-}"
 
 # The golang package that we are building.
-readonly KUN_GO_PACKAGE=github.com/baidu/openless
+readonly KUN_GO_PACKAGE=github.com/baidu/easyfaas
 readonly KUN_GOPATH="${KUN_OUTPUT}/go"
 
 # The set of server targets that we are only building for Linux

@@ -26,11 +26,11 @@ import (
 
 	"gopkg.in/yaml.v3"
 
-	"github.com/baidu/openless/pkg/api"
-	funcletCtx "github.com/baidu/openless/pkg/funclet/context"
-	"github.com/baidu/openless/pkg/funclet/file"
-	"github.com/baidu/openless/pkg/funclet/runtime/runc"
-	"github.com/baidu/openless/pkg/util/strtool"
+	"github.com/baidu/easyfaas/pkg/api"
+	funcletCtx "github.com/baidu/easyfaas/pkg/funclet/context"
+	"github.com/baidu/easyfaas/pkg/funclet/file"
+	"github.com/baidu/easyfaas/pkg/funclet/runtime/runc"
+	"github.com/baidu/easyfaas/pkg/util/strtool"
 )
 
 func (f *Funclet) IDEWarmUpContainerEvent(ctx *funcletCtx.Context, params api.WarmupRequest) (err error) {

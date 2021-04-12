@@ -21,7 +21,7 @@ import (
 
 	routing "github.com/qiangxue/fasthttp-routing"
 
-	"github.com/baidu/openless/cmd/stubs/options"
+	"github.com/baidu/easyfaas/cmd/stubs/options"
 )
 
 func HelloWorldHandler(c *routing.Context) error {

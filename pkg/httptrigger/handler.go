@@ -19,7 +19,7 @@ package httptrigger
 import (
 	"net/http"
 
-	"github.com/baidu/openless/pkg/api"
+	"github.com/baidu/easyfaas/pkg/api"
 
 	routing "github.com/qiangxue/fasthttp-routing"
 )

@@ -21,7 +21,7 @@ import (
 
 	"go.uber.org/zap/zapcore"
 
-	"github.com/baidu/openless/pkg/util/logs/metric"
+	"github.com/baidu/easyfaas/pkg/util/logs/metric"
 )
 
 var (

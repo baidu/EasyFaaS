@@ -21,12 +21,12 @@ import (
 	"io/ioutil"
 	"time"
 
-	"github.com/baidu/openless/pkg/api"
+	"github.com/baidu/easyfaas/pkg/api"
 
 	"go.uber.org/zap"
 
-	innerErr "github.com/baidu/openless/pkg/error"
-	"github.com/baidu/openless/pkg/util/logs"
+	innerErr "github.com/baidu/easyfaas/pkg/error"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 )
 
 type Control interface {

@@ -48,13 +48,13 @@ Usage: scripts/build-image.sh [OPTIONS]
 打包all-in-one镜像，其中会包含controller组件、 funclet组件、 stubs组件。需要注意的runtime目前不开源，直接拉取镜像即可，执行脚本打包：
 
 ```$shell
-$ scripts/build-image.sh -m=one -i=openless -t=dev
+$ scripts/build-image.sh -m=one -i=easyfaas -t=dev
 ```
 
 如果您需要发布打包好的镜像，需要指定REGISTRY，如：
 
 ```$shell
-$REGISTRY=registry.baidubce.com/<your_namespace>/ ./scripts/build-image.sh -m=one -i=openless -t=dev
+$REGISTRY=registry.baidubce.com/<your_namespace>/ ./scripts/build-image.sh -m=one -i=easyfaas -t=dev
 ```
 
 REGISTRY地址可以在 [百度云容器镜像服务](https://cloud.baidu.com/doc/CCR/s/qk8gwqs4a) 中免费申请体验
@@ -72,13 +72,13 @@ docker push registry.baidubce.com/<your_namespace>/<your_image_name>:<your_image
 ## 4. 启动服务
 
 ```$shell
-export faasPath=/<your_path_prefix>/openless/faas
+export faasPath=/<your_path_prefix>/easyfaas/faas
 
 #runner-runtime请直接下载镜像
-docker run -td -e WITHRUNNER=1 -e WITHNODEJS10=1  -e WITHNODEJS12=1 -e WITHPYTHON3=1 --name runner-runtime -v ${faasPath}/runtime:/var/faas/runtime -v ${faasPath}/runner:/var/faas/runner registry.baidubce.com/openless-public/runner-runtime:demo1.0
+docker run -td -e WITHRUNNER=1 -e WITHNODEJS10=1  -e WITHNODEJS12=1 -e WITHPYTHON3=1 --name runner-runtime -v ${faasPath}/runtime:/var/faas/runtime -v ${faasPath}/runner:/var/faas/runner registry.baidubce.com/easyfaas-public/runner-runtime:demo1.0
 
 # 启动all-in-one服务
-docker run -td --privileged -v ${faasPath}/runner:/var/faas/runner -v ${faasPath}/runtime:/var/faas/runtime -v ${faasPath}/data:/var/faas/runner-data --name openless registry.baidubce.com/openless/all-in-one:demo1.0
+docker run -td --privileged -v ${faasPath}/runner:/var/faas/runner -v ${faasPath}/runtime:/var/faas/runtime -v ${faasPath}/data:/var/faas/runner-data --name easyfaas registry.baidubce.com/easyfaas/all-in-one:demo1.0
 ```
 
 ## 5. 操作运行
@@ -86,7 +86,7 @@ docker run -td --privileged -v ${faasPath}/runner:/var/faas/runner -v ${faasPath
 安装运行完成后，执行如下命令进入到容器内：
 
 ```shell
-$ docker exec -it openless bash
+$ docker exec -it easyfaas bash
 ```
 
 ### 1. 创建函数
@@ -126,7 +126,7 @@ AAAAAAEAAQBOAAAAkgAAAAAA
 请求body中Code字段填入上一步骤中获得的base64编码
 
 ```cassandraql
-$ curl -X POST "http://127.0.0.1:8002/v1/functions/testHelloWorld" -d '{"Version":"1","Description":"stubs create","Runtime":"nodejs10","Timeout":5,"MemorySize":128,"Handler":"index.handler","PodConcurrentQuota":10,"Code":"UEsDBBQAAAAAAHCjX00AAAAAAAAAAAAAAAAJABUAX19NQUNPU1gvVVgIALSf2Vu0n9lbVVQFAAG0n9lbUEsDBBQACAAIAAyjX00AAAAAAAAAAAAAAAATABUAX19NQUNPU1gvLl9pbmRleC5qc1VYCACwn9lb+J7ZW1VUBQAB+J7ZW2JgFWNnYGJg8E1MVvAPVohQgAKQGAMnAwODEQMDQx0DA5i/gYEo4BgSEgRlgnQsYGBgEEBTwogQl0rOz9VLLCjISdXLSSwuKS1OTUlJLElVDggGKXw772Y0iO5J8tAH0YAAAAD//1BLBwgOCcksZgAAALAAAABQSwMEFAAIAAgAAAAAAAAAAAAAAAAAAAAAAAgAAABpbmRleC5qc0qtKMgvKinWy0jMS8lJLVKwVdBILUvNK9FRSM7PK0mtADESc3KSEpOzNRVs7RSquRQUFOBCGnmlOTk6CkoeqTk5+Qrl+UU5KYpKmtZctdaAAAAA//9QSwcILzRMjVUAAABYAAAAUEsBAhQDFAAAAAAAcKNfTQAAAAAAAAAAAAAAAAkAFQAAAAAAAAAAQP1BAAAAAF9fTUFDT1NYL1VYCAC0n9lbtJ/ZW1VUBQABtJ/ZW1BLAQIUAxQACAAIAAyjX00OCcksZgAAALAAAAATABUAAAAAAAAAAECkgTwAAABfX01BQ09TWC8uX2luZGV4LmpzVVgIALCf2Vv4ntlbVVQFAAH4ntlbUEsBAhQAFAAIAAgAAAAAAC80TI1VAAAAWAAAAAgAAAAAAAAAAAAAAAAA+AAAAGluZGV4LmpzUEsFBgAAAAADAAMA2AAAAIMBAAAAAA=="}' -H 'X-Openless-Account-Id: df391b08c64c426a81645468c75163a5'   -H 'Content-Type: application/json; charset=utf-8'
+$ curl -X POST "http://127.0.0.1:8002/v1/functions/testHelloWorld" -d '{"Version":"1","Description":"stubs create","Runtime":"nodejs10","Timeout":5,"MemorySize":128,"Handler":"index.handler","PodConcurrentQuota":10,"Code":"UEsDBBQAAAAAAHCjX00AAAAAAAAAAAAAAAAJABUAX19NQUNPU1gvVVgIALSf2Vu0n9lbVVQFAAG0n9lbUEsDBBQACAAIAAyjX00AAAAAAAAAAAAAAAATABUAX19NQUNPU1gvLl9pbmRleC5qc1VYCACwn9lb+J7ZW1VUBQAB+J7ZW2JgFWNnYGJg8E1MVvAPVohQgAKQGAMnAwODEQMDQx0DA5i/gYEo4BgSEgRlgnQsYGBgEEBTwogQl0rOz9VLLCjISdXLSSwuKS1OTUlJLElVDggGKXw772Y0iO5J8tAH0YAAAAD//1BLBwgOCcksZgAAALAAAABQSwMEFAAIAAgAAAAAAAAAAAAAAAAAAAAAAAgAAABpbmRleC5qc0qtKMgvKinWy0jMS8lJLVKwVdBILUvNK9FRSM7PK0mtADESc3KSEpOzNRVs7RSquRQUFOBCGnmlOTk6CkoeqTk5+Qrl+UU5KYpKmtZctdaAAAAA//9QSwcILzRMjVUAAABYAAAAUEsBAhQDFAAAAAAAcKNfTQAAAAAAAAAAAAAAAAkAFQAAAAAAAAAAQP1BAAAAAF9fTUFDT1NYL1VYCAC0n9lbtJ/ZW1VUBQABtJ/ZW1BLAQIUAxQACAAIAAyjX00OCcksZgAAALAAAAATABUAAAAAAAAAAECkgTwAAABfX01BQ09TWC8uX2luZGV4LmpzVVgIALCf2Vv4ntlbVVQFAAH4ntlbUEsBAhQAFAAIAAgAAAAAAC80TI1VAAAAWAAAAAgAAAAAAAAAAAAAAAAA+AAAAGluZGV4LmpzUEsFBgAAAAADAAMA2AAAAIMBAAAAAA=="}' -H 'X-easyfaas-Account-Id: df391b08c64c426a81645468c75163a5'   -H 'Content-Type: application/json; charset=utf-8'
 请求示例
 POST /v1/functions/testHelloWorld HTTP/1.1
 Content-Type: application/json; charset=utf-8
@@ -151,7 +151,7 @@ Connection: close
 请求示例
 
 ```cassandraql
-$ curl -X GET "http://127.0.0.1:8002/v1/functions/brn:cloud:faas:bj:8f6e5a28c663957ea04522547a66d08f:function:testHelloWorld:1" -H 'X-Openless-Account-Id: df391b08c64c426a81645468c75163a5'   -H 'Content-Type: application/json; charset=utf-8' 
+$ curl -X GET "http://127.0.0.1:8002/v1/functions/brn:cloud:faas:bj:8f6e5a28c663957ea04522547a66d08f:function:testHelloWorld:1" -H 'X-easyfaas-Account-Id: df391b08c64c426a81645468c75163a5'   -H 'Content-Type: application/json; charset=utf-8' 
 
 GET /v1/functions/testHelloWorld HTTP/1.1
 Host: 127.0.0.1:8002
@@ -218,11 +218,11 @@ Connection: close
 向controller发起函数调用请求
 
 ```cassandraql
-$ curl -X "POST" "http://127.0.0.1:8001/v1/functions/brn:cloud:faas:bj:8f6e5a28c663957ea04522547a66d08f:function:testHelloWorld:1/invocations"   -H 'X-Openless-Account-Id: df391b08c64c426a81645468c75163a5'      -H 'Content-Type: application/json; charset=utf-8'      -d $'{}'
+$ curl -X "POST" "http://127.0.0.1:8001/v1/functions/brn:cloud:faas:bj:8f6e5a28c663957ea04522547a66d08f:function:testHelloWorld:1/invocations"   -H 'X-easyfaas-Account-Id: df391b08c64c426a81645468c75163a5'      -H 'Content-Type: application/json; charset=utf-8'      -d $'{}'
 请求示例
 POST /v1/functions/brn:bce:cfc:bj:cd64f99c69d7c404b61de0a4f1865834:function:testHSF2:1/invocations HTTP/1.1
 Content-Type: application/json; charset=utf-8
-X-Openless-Account-Id: df391b08c64c426a81645468c75163a5
+X-easyfaas-Account-Id: df391b08c64c426a81645468c75163a5
 Host: 127.0.0.1:8001
 Connection: close
 

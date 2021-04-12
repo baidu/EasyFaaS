@@ -18,8 +18,8 @@
 package tmp
 
 import (
+	"github.com/baidu/easyfaas/pkg/api"
 	"github.com/spf13/pflag"
-	"github.com/baidu/openless/pkg/api"
 )
 
 type TmpStorageOption struct {

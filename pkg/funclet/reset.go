@@ -26,9 +26,9 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/baidu/openless/pkg/api"
-	funcletCtx "github.com/baidu/openless/pkg/funclet/context"
-	"github.com/baidu/openless/pkg/funclet/runtime/runc"
+	"github.com/baidu/easyfaas/pkg/api"
+	funcletCtx "github.com/baidu/easyfaas/pkg/funclet/context"
+	"github.com/baidu/easyfaas/pkg/funclet/runtime/runc"
 )
 
 func (f *Funclet) ResetContainerEvent(ctx *funcletCtx.Context, params *api.ResetRequest) (err error, response *api.ResetResponse) {

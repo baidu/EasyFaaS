@@ -21,7 +21,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/baidu/openless/pkg/util/json"
+	"github.com/baidu/easyfaas/pkg/util/json"
 )
 
 type StatisticInfo struct {

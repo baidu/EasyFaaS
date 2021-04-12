@@ -21,11 +21,11 @@ import (
 	"fmt"
 	"net/http"
 
-	utilerrors "github.com/baidu/openless/pkg/util/errors"
-	utilruntime "github.com/baidu/openless/pkg/util/runtime"
+	utilerrors "github.com/baidu/easyfaas/pkg/util/errors"
+	utilruntime "github.com/baidu/easyfaas/pkg/util/runtime"
 
-	"github.com/baidu/openless/pkg/server/healthz"
-	"github.com/baidu/openless/pkg/util/logs"
+	"github.com/baidu/easyfaas/pkg/server/healthz"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 )
 
 // PostStartHookFunc is a function that is called after the server has started.

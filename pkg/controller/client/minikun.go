@@ -17,7 +17,7 @@
 package client
 
 import (
-	"github.com/baidu/openless/pkg/api"
+	"github.com/baidu/easyfaas/pkg/api"
 )
 
 type ControllerClientInterface interface {

@@ -10,7 +10,7 @@ MAKEFLAGS += --no-builtin-rules
 .EXPORT_ALL_VARIABLES:
 OUT_DIR ?= _output
 BIN_DIR := $(OUT_DIR)/bin
-PRJ_SRC_PATH := github.com/baidu/openless
+PRJ_SRC_PATH := github.com/baidu/easyfaas
 GENERATED_FILE_PREFIX := zz_generated.
 
 # Metadata for driving the build lives here.

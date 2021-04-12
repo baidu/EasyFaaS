@@ -22,7 +22,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/baidu/openless/pkg/util/mount"
+	"github.com/baidu/easyfaas/pkg/util/mount"
 )
 
 // FindDevice

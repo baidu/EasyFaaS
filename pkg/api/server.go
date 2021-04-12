@@ -21,19 +21,19 @@ import (
 )
 
 const (
-	HeaderXRequestID    = "X-Openless-Request-Id"
-	HeaderXAccountID    = "X-Openless-Account-Id"
+	HeaderXRequestID    = "X-easyfaas-Request-Id"
+	HeaderXAccountID    = "X-easyfaas-Account-Id"
 	HeaderAuthorization = "Authorization"
 	AppNameKey          = "app"
-	HeaderInvokeType    = "X-Openless-Invoke-Type"
+	HeaderInvokeType    = "X-easyfaas-Invoke-Type"
 	HeaderLogType       = "Log-Type"
 	HeaderLogToBody     = "Log-To-Body"
 	HeaderXAuthToken    = "X-Auth-Token"
 
 	BceFaasUIDKey          = "BCE-FAAS-UID"
-	BceFaasTriggerKey      = "X-Openless-Faas-Trigger"
-	XBceFunctionError      = "X-Openless-Function-Error"
-	HeaderOpenLessExecTime = "X-Openless-Function-Exectime"
+	BceFaasTriggerKey      = "X-easyfaas-Faas-Trigger"
+	XBceFunctionError      = "X-easyfaas-Function-Error"
+	HeadereasyfaasExecTime = "X-easyfaas-Function-Exectime"
 	HeaderLogResult        = "X-Bce-Log-Result"
 
 	QueryLogType   = "logType"

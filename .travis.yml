@@ -1,5 +1,5 @@
 language: go
-go_import_path: github.com/baidu/openless
+go_import_path: github.com/baidu/easyfaas
 
 sudo: false
 

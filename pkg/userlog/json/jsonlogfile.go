@@ -22,7 +22,7 @@ import (
 	"os"
 	"sync/atomic"
 
-	"github.com/baidu/openless/pkg/userlog"
+	"github.com/baidu/easyfaas/pkg/userlog"
 )
 
 var (

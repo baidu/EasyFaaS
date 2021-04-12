@@ -21,9 +21,9 @@ import (
 
 	restful "github.com/emicklei/go-restful"
 
-	"github.com/baidu/openless/pkg/api"
-	innerErr "github.com/baidu/openless/pkg/error"
-	"github.com/baidu/openless/pkg/util/logs"
+	"github.com/baidu/easyfaas/pkg/api"
+	innerErr "github.com/baidu/easyfaas/pkg/error"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 )
 
 type (

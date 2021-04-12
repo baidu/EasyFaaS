@@ -19,9 +19,9 @@ package file
 import (
 	"time"
 
-	"github.com/baidu/openless/pkg/api"
-	"github.com/baidu/openless/pkg/util/logs"
-	"github.com/baidu/openless/pkg/util/mount"
+	"github.com/baidu/easyfaas/pkg/api"
+	"github.com/baidu/easyfaas/pkg/util/logs"
+	"github.com/baidu/easyfaas/pkg/util/mount"
 )
 
 // MountManagerInterface

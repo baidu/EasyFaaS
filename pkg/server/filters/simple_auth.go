@@ -19,9 +19,9 @@ package filters
 import (
 	"net/http"
 
-	kunErr "github.com/baidu/openless/pkg/error"
+	kunErr "github.com/baidu/easyfaas/pkg/error"
 
-	"github.com/baidu/openless/pkg/rest"
+	"github.com/baidu/easyfaas/pkg/rest"
 )
 
 // WithSimpleAuthTokenVerify xxx

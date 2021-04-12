@@ -19,7 +19,7 @@ package function
 import (
 	"time"
 
-	"github.com/baidu/openless/pkg/util/cache"
+	"github.com/baidu/easyfaas/pkg/util/cache"
 )
 
 type CacheType string

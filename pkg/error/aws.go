@@ -16,9 +16,8 @@
 
 package error
 
-
 import (
-	"github.com/baidu/openless/pkg/util/json"
+	"github.com/baidu/easyfaas/pkg/util/json"
 )
 
 // AwsMessage

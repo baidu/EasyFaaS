@@ -18,7 +18,7 @@ package rtctrl
 
 import (
 	"context"
-	"github.com/baidu/openless/pkg/api"
+	"github.com/baidu/easyfaas/pkg/api"
 	"mime"
 	"net/http"
 )

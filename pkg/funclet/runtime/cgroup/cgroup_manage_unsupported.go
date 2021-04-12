@@ -18,7 +18,7 @@
 
 package cgroup
 
-import "github.com/baidu/openless/pkg/api"
+import "github.com/baidu/easyfaas/pkg/api"
 
 // CgroupSubsystems holds information about the mounted cgroup subsytems
 type CgroupSubsystems struct {

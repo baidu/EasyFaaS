@@ -17,10 +17,10 @@
 package httptrigger
 
 import (
+	"github.com/baidu/easyfaas/pkg/api"
+	"github.com/baidu/easyfaas/pkg/util/id"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 	routing "github.com/qiangxue/fasthttp-routing"
-	"github.com/baidu/openless/pkg/api"
-	"github.com/baidu/openless/pkg/util/id"
-	"github.com/baidu/openless/pkg/util/logs"
 )
 
 func BuildContext(c *routing.Context) *Context {

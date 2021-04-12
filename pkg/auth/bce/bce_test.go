@@ -22,9 +22,9 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/baidu/openless/pkg/rest"
+	"github.com/baidu/easyfaas/pkg/rest"
 
-	"github.com/baidu/openless/pkg/auth"
+	"github.com/baidu/easyfaas/pkg/auth"
 )
 
 func TestBceAuthFactory_NewSigner(t *testing.T) {

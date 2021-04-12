@@ -21,8 +21,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/baidu/openless/pkg/util/json"
-	"github.com/baidu/openless/pkg/util/logs"
+	"github.com/baidu/easyfaas/pkg/util/json"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 )
 
 // startRunnerLoop

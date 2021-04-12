@@ -24,11 +24,11 @@ import (
 
 	"github.com/spf13/pflag"
 
-	"github.com/baidu/openless/cmd/funclet/app"
-	"github.com/baidu/openless/cmd/funclet/options"
-	"github.com/baidu/openless/pkg/util/flag"
-	"github.com/baidu/openless/pkg/util/logs"
-	"github.com/baidu/openless/pkg/version/verflag"
+	"github.com/baidu/easyfaas/cmd/funclet/app"
+	"github.com/baidu/easyfaas/cmd/funclet/options"
+	"github.com/baidu/easyfaas/pkg/util/flag"
+	"github.com/baidu/easyfaas/pkg/util/logs"
+	"github.com/baidu/easyfaas/pkg/version/verflag"
 )
 
 func main() {

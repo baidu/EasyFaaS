@@ -17,10 +17,10 @@
 package function
 
 import (
-	"github.com/baidu/openless/pkg/controller/registry"
+	"github.com/baidu/easyfaas/pkg/controller/registry"
 
-	"github.com/baidu/openless/pkg/api"
-	"github.com/baidu/openless/pkg/util/logs"
+	"github.com/baidu/easyfaas/pkg/api"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 )
 
 // DataStorer xxx

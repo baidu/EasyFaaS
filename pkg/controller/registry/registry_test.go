@@ -23,17 +23,17 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	kunErr "github.com/baidu/openless/pkg/error"
+	kunErr "github.com/baidu/easyfaas/pkg/error"
 
 	"github.com/spf13/pflag"
 
-	"github.com/baidu/openless/pkg/auth"
-	"github.com/baidu/openless/pkg/util/json"
+	"github.com/baidu/easyfaas/pkg/auth"
+	"github.com/baidu/easyfaas/pkg/util/json"
 
-	"github.com/baidu/openless/pkg/util"
+	"github.com/baidu/easyfaas/pkg/util"
 
 	"github.com/aws/aws-sdk-go/service/lambda"
-	"github.com/baidu/openless/pkg/api"
+	"github.com/baidu/easyfaas/pkg/api"
 )
 
 func TestNewRegistry(t *testing.T) {
@@ -188,8 +188,8 @@ func getFunction() *api.GetFunctionOutput {
 			},
 			Uid: uid,
 		},
-		Uid:         uid,
-		LogType:     "bos",
+		Uid:     uid,
+		LogType: "bos",
 	}
 }
 

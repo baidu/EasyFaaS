@@ -20,8 +20,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/baidu/openless/pkg/funclet/context"
-	"github.com/baidu/openless/pkg/util/zip"
+	"github.com/baidu/easyfaas/pkg/funclet/context"
+	"github.com/baidu/easyfaas/pkg/util/zip"
 )
 
 // UnzipCode

@@ -24,9 +24,9 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/baidu/openless/pkg/repository"
-	"github.com/baidu/openless/pkg/repository/factory"
-	"github.com/baidu/openless/pkg/util/logs"
+	"github.com/baidu/easyfaas/pkg/repository"
+	"github.com/baidu/easyfaas/pkg/repository/factory"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 )
 
 const (

@@ -19,7 +19,7 @@ package httptrigger
 import (
 	"net/http"
 
-	kunErr "github.com/baidu/openless/pkg/error"
+	kunErr "github.com/baidu/easyfaas/pkg/error"
 )
 
 const (

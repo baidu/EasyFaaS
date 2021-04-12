@@ -19,16 +19,16 @@ package controller
 import (
 	"time"
 
-	"github.com/baidu/openless/pkg/controller/function"
+	"github.com/baidu/easyfaas/pkg/controller/function"
 
-	"github.com/baidu/openless/pkg/funclet/client"
+	"github.com/baidu/easyfaas/pkg/funclet/client"
 
-	"github.com/baidu/openless/pkg/util/id"
+	"github.com/baidu/easyfaas/pkg/util/id"
 
-	"github.com/baidu/openless/cmd/controller/options"
-	"github.com/baidu/openless/pkg/api"
-	"github.com/baidu/openless/pkg/controller/rtctrl"
-	"github.com/baidu/openless/pkg/util/logs"
+	"github.com/baidu/easyfaas/cmd/controller/options"
+	"github.com/baidu/easyfaas/pkg/api"
+	"github.com/baidu/easyfaas/pkg/controller/rtctrl"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 )
 
 func Init(options *options.ControllerOptions) (controller *Controller, err error) {

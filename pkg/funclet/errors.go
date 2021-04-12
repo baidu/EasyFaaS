@@ -19,7 +19,7 @@ package funclet
 import (
 	"fmt"
 
-	"github.com/baidu/openless/pkg/api"
+	"github.com/baidu/easyfaas/pkg/api"
 )
 
 type ContainerNotExist struct {

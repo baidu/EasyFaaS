@@ -28,8 +28,8 @@ import (
 
 	"go.uber.org/zap"
 
-	"github.com/baidu/openless/pkg/userlog"
-	"github.com/baidu/openless/pkg/util/logs"
+	"github.com/baidu/easyfaas/pkg/userlog"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 )
 
 type LogStatStore interface {
@@ -269,7 +269,7 @@ func (s *kunLogStatStore) WriteFunctionLog(log string) error {
 		TriggerType:    s.triggerType,
 		RuntimeID:      s.runtimeID,
 		RequestID:      s.requestID,
-		Source:         logSource[OpenlessSysLog],
+		Source:         logSource[easyfaasSysLog],
 		Message:        []byte(log),
 		UserID:         s.userID,
 		FuncName:       s.funcName,
@@ -305,7 +305,7 @@ func (s *kunLogStatStore) WriteFunctionReportLog(log string, params *reportParam
 		TriggerType:    s.triggerType,
 		RuntimeID:      s.runtimeID,
 		RequestID:      s.requestID,
-		Source:         logSource[OpenlessSysLog],
+		Source:         logSource[easyfaasSysLog],
 		Message:        []byte(log),
 		UserID:         s.userID,
 		FuncName:       s.funcName,

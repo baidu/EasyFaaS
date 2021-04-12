@@ -39,8 +39,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/baidu/openless/pkg/util/json"
-	"github.com/baidu/openless/pkg/util/logs"
+	"github.com/baidu/easyfaas/pkg/util/json"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 )
 
 // ErrorType is the alias of string

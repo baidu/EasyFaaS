@@ -21,14 +21,14 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/baidu/openless/pkg/funclet/device/utils"
+	"github.com/baidu/easyfaas/pkg/funclet/device/utils"
 
-	"github.com/baidu/openless/pkg/api"
-	"github.com/baidu/openless/pkg/funclet/device/loop"
-	"github.com/baidu/openless/pkg/funclet/storage"
-	"github.com/baidu/openless/pkg/util/file"
-	"github.com/baidu/openless/pkg/util/logs"
-	"github.com/baidu/openless/pkg/util/mount"
+	"github.com/baidu/easyfaas/pkg/api"
+	"github.com/baidu/easyfaas/pkg/funclet/device/loop"
+	"github.com/baidu/easyfaas/pkg/funclet/storage"
+	"github.com/baidu/easyfaas/pkg/util/file"
+	"github.com/baidu/easyfaas/pkg/util/logs"
+	"github.com/baidu/easyfaas/pkg/util/mount"
 )
 
 func init() {

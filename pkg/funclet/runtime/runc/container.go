@@ -18,9 +18,9 @@
 package runc
 
 import (
-	"github.com/baidu/openless/pkg/funclet/runtime/api"
-	runtimeErr "github.com/baidu/openless/pkg/funclet/runtime/error"
-	"github.com/baidu/openless/pkg/util/logs"
+	"github.com/baidu/easyfaas/pkg/funclet/runtime/api"
+	runtimeErr "github.com/baidu/easyfaas/pkg/funclet/runtime/error"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 )
 
 type runcContainerRuntime struct {

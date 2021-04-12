@@ -22,10 +22,10 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/baidu/openless/pkg/api"
-	"github.com/baidu/openless/pkg/controller"
+	"github.com/baidu/easyfaas/pkg/api"
+	"github.com/baidu/easyfaas/pkg/controller"
 
-	"github.com/baidu/openless/cmd/controller/options"
+	"github.com/baidu/easyfaas/cmd/controller/options"
 )
 
 func TestControllerCallClient_Invoke(t *testing.T) {

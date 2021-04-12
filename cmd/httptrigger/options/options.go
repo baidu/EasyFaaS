@@ -18,8 +18,8 @@ package options
 
 import (
 	"github.com/spf13/pflag"
-	controllerClient "github.com/baidu/openless/pkg/controller/client"
-	genericoptions "github.com/baidu/openless/pkg/server/options"
+	controllerClient "github.com/baidu/easyfaas/pkg/controller/client"
+	genericoptions "github.com/baidu/easyfaas/pkg/server/options"
 )
 
 type HTTPTriggerOptions struct {

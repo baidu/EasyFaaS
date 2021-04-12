@@ -35,10 +35,10 @@ import (
 
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	kunErr "github.com/baidu/openless/pkg/error"
-	myjson "github.com/baidu/openless/pkg/rest/serializer/json"
-	"github.com/baidu/openless/pkg/util/json"
-	"github.com/baidu/openless/pkg/util/logs"
+	kunErr "github.com/baidu/easyfaas/pkg/error"
+	myjson "github.com/baidu/easyfaas/pkg/rest/serializer/json"
+	"github.com/baidu/easyfaas/pkg/util/json"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 )
 
 // HTTPClient is an interface for testing a request object.

@@ -25,7 +25,7 @@ import (
 
 	"go.uber.org/zap"
 
-	"github.com/baidu/openless/pkg/funclet/context"
+	"github.com/baidu/easyfaas/pkg/funclet/context"
 )
 
 // CheckCode

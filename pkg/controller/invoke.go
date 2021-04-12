@@ -28,11 +28,11 @@ import (
 
 	"go.uber.org/zap"
 
-	"github.com/baidu/openless/pkg/api"
-	"github.com/baidu/openless/pkg/brn"
-	"github.com/baidu/openless/pkg/controller/rtctrl"
-	innerErr "github.com/baidu/openless/pkg/error"
-	"github.com/baidu/openless/pkg/util/json"
+	"github.com/baidu/easyfaas/pkg/api"
+	"github.com/baidu/easyfaas/pkg/brn"
+	"github.com/baidu/easyfaas/pkg/controller/rtctrl"
+	innerErr "github.com/baidu/easyfaas/pkg/error"
+	"github.com/baidu/easyfaas/pkg/util/json"
 )
 
 type ControllerInterface interface {
@@ -442,7 +442,7 @@ func (controller *Controller) buildResponse(ctx *InvokeContext, output *rtctrl.I
 	ctx.Response.SetStatusCode(http.StatusOK)
 
 	if ctx.Statistic.Statistic != nil {
-		ctx.Response.SetHeader(api.HeaderOpenLessExecTime, strconv.FormatFloat(ctx.Statistic.Statistic.Duration, 'f', 3, 64))
+		ctx.Response.SetHeader(api.HeadereasyfaasExecTime, strconv.FormatFloat(ctx.Statistic.Statistic.Duration, 'f', 3, 64))
 	}
 
 	if ctx.Input.EnableMetrics {

@@ -26,7 +26,7 @@ import (
 	"syscall"
 	"unsafe"
 
-	"github.com/baidu/openless/pkg/funclet/device/utils"
+	"github.com/baidu/easyfaas/pkg/funclet/device/utils"
 
 	"golang.org/x/sys/unix"
 )

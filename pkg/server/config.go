@@ -22,11 +22,11 @@ import (
 	"runtime"
 	"time"
 
-	genericfilters "github.com/baidu/openless/pkg/server/filters"
-	"github.com/baidu/openless/pkg/server/healthz"
-	"github.com/baidu/openless/pkg/server/routes"
-	"github.com/baidu/openless/pkg/util/waitgroup"
-	"github.com/baidu/openless/pkg/version"
+	genericfilters "github.com/baidu/easyfaas/pkg/server/filters"
+	"github.com/baidu/easyfaas/pkg/server/healthz"
+	"github.com/baidu/easyfaas/pkg/server/routes"
+	"github.com/baidu/easyfaas/pkg/util/waitgroup"
+	"github.com/baidu/easyfaas/pkg/version"
 )
 
 // Config is a structure used to configure a GenericAPIServer.

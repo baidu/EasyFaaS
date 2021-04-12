@@ -17,12 +17,12 @@
 package client
 
 import (
-	"github.com/baidu/openless/cmd/controller/options"
-	"github.com/baidu/openless/pkg/api"
-	"github.com/baidu/openless/pkg/funclet/client"
-	"github.com/baidu/openless/pkg/controller"
-	"github.com/baidu/openless/pkg/util/id"
-	"github.com/baidu/openless/pkg/util/logs"
+	"github.com/baidu/easyfaas/cmd/controller/options"
+	"github.com/baidu/easyfaas/pkg/api"
+	"github.com/baidu/easyfaas/pkg/controller"
+	"github.com/baidu/easyfaas/pkg/funclet/client"
+	"github.com/baidu/easyfaas/pkg/util/id"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 )
 
 type ControllerCallClient struct {

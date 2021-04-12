@@ -21,7 +21,7 @@ import (
 
 	"github.com/emicklei/go-restful"
 
-	"github.com/baidu/openless/pkg/version"
+	"github.com/baidu/easyfaas/pkg/version"
 )
 
 // Version provides a webservice with version information.

@@ -24,15 +24,15 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/baidu/openless/pkg/util/bytefmt"
+	"github.com/baidu/easyfaas/pkg/util/bytefmt"
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/baidu/openless/pkg/api"
+	"github.com/baidu/easyfaas/pkg/api"
 
 	"github.com/google/uuid"
 
-	kunhttptest "github.com/baidu/openless/pkg/util/httptest"
+	kunhttptest "github.com/baidu/easyfaas/pkg/util/httptest"
 )
 
 func getTmpSock() string {

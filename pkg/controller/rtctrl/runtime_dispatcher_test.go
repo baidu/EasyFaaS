@@ -22,13 +22,13 @@ import (
 	"testing"
 	"time"
 
-	"github.com/baidu/openless/pkg/util/bytefmt"
+	"github.com/baidu/easyfaas/pkg/util/bytefmt"
 
 	"github.com/stretchr/testify/assert"
 
 	"github.com/aws/aws-sdk-go/service/lambda"
 
-	"github.com/baidu/openless/pkg/api"
+	"github.com/baidu/easyfaas/pkg/api"
 )
 
 var minMemory = api.MinMemorySize

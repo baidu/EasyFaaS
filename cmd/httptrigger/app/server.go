@@ -19,11 +19,11 @@ package app
 import (
 	"fmt"
 
-	"github.com/baidu/openless/pkg/httptrigger"
+	"github.com/baidu/easyfaas/pkg/httptrigger"
 
 	"github.com/valyala/fasthttp"
 
-	"github.com/baidu/openless/cmd/httptrigger/options"
+	"github.com/baidu/easyfaas/cmd/httptrigger/options"
 )
 
 func Run(runOptions *options.HTTPTriggerOptions) error {

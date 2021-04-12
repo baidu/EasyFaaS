@@ -17,7 +17,7 @@
 package auth
 
 import (
-	"github.com/baidu/openless/pkg/rest"
+	"github.com/baidu/easyfaas/pkg/rest"
 )
 
 type Signer interface {

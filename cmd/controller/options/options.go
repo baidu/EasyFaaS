@@ -22,11 +22,11 @@ import (
 
 	"github.com/spf13/pflag"
 
-	"github.com/baidu/openless/pkg/funclet/client"
-	"github.com/baidu/openless/pkg/controller/function"
-	"github.com/baidu/openless/pkg/controller/registry"
-	"github.com/baidu/openless/pkg/controller/rtctrl"
-	genericoptions "github.com/baidu/openless/pkg/server/options"
+	"github.com/baidu/easyfaas/pkg/funclet/client"
+	"github.com/baidu/easyfaas/pkg/controller/function"
+	"github.com/baidu/easyfaas/pkg/controller/registry"
+	"github.com/baidu/easyfaas/pkg/controller/rtctrl"
+	genericoptions "github.com/baidu/easyfaas/pkg/server/options"
 )
 
 // ControllerOptions: options of the controller app

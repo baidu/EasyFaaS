@@ -24,7 +24,7 @@ import (
 	"os/exec"
 	"syscall"
 
-	"github.com/baidu/openless/pkg/util/logs"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 )
 
 func CommandOutput(command string, args ...string) (data []byte, err error) {

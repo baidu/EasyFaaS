@@ -94,10 +94,10 @@ docker push registry.baidubce.com/<your_namespace>/<your_image_name>:<your_image
 ## 4. 启动服务
 
 ```$shell
-export faasPath=/<your_path_prefix>/openless/faas
+export faasPath=/<your_path_prefix>/easyfaas/faas
 
 #runner-runtime请直接下载镜像
-docker run -t -d -e WITHRUNNER=1 -e WITHNODEJS10=1  -e WITHNODEJS12=1 -e WITHPYTHON3=1 --name runner-runtime -v ${faasPath}/runtime:/var/faas/runtime -v ${faasPath}/runner:/var/faas/runner registry.baidubce.com/openless-public/runner-runtime:demo1.0
+docker run -t -d -e WITHRUNNER=1 -e WITHNODEJS10=1  -e WITHNODEJS12=1 -e WITHPYTHON3=1 --name runner-runtime -v ${faasPath}/runtime:/var/faas/runtime -v ${faasPath}/runner:/var/faas/runner registry.baidubce.com/easyfaas-public/runner-runtime:demo1.0
 
 
 #分别启动controller、stubs(func-registry)、funclet组件

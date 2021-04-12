@@ -17,7 +17,7 @@
 package httptrigger
 
 import (
-	"github.com/baidu/openless/pkg/controller/client"
+	"github.com/baidu/easyfaas/pkg/controller/client"
 )
 
 var instance *Proxy

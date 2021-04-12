@@ -25,11 +25,11 @@ fstart () {
       chmod 777 "$FUNCTION_DATA_DIR"
     fi
 
-    DOCKER_CONFIG=${BUILD_HOME}/.docker docker-compose --project-directory ${BUILD_HOME} -f ${BUILD_HOME}/docker-compose.yaml -p openless up --force-recreate -d
+    DOCKER_CONFIG=${BUILD_HOME}/.docker docker-compose --project-directory ${BUILD_HOME} -f ${BUILD_HOME}/docker-compose.yaml -p easyfaas up --force-recreate -d
 }
 
 fstop () {
-    docker-compose --project-directory ${BUILD_HOME} -f ${BUILD_HOME}/docker-compose.yaml -p openless down --volumes --remove-orphans
+    docker-compose --project-directory ${BUILD_HOME} -f ${BUILD_HOME}/docker-compose.yaml -p easyfaas down --volumes --remove-orphans
 }
 
 frestart () {
@@ -39,7 +39,7 @@ frestart () {
 
 fstats () {
   echo ${BUILD_HOME}
-   docker-compose --project-directory ${BUILD_HOME} -f ${BUILD_HOME}/docker-compose.yaml -p openless ps
+   docker-compose --project-directory ${BUILD_HOME} -f ${BUILD_HOME}/docker-compose.yaml -p easyfaas ps
 }
 
 ACTION=$1

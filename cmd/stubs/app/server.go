@@ -21,8 +21,8 @@ import (
 
 	"github.com/valyala/fasthttp"
 
-	"github.com/baidu/openless/cmd/stubs/options"
-	"github.com/baidu/openless/pkg/stubs"
+	"github.com/baidu/easyfaas/cmd/stubs/options"
+	"github.com/baidu/easyfaas/pkg/stubs"
 )
 
 func Run(stubsOptions *options.StubsOptions) error {

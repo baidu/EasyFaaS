@@ -21,16 +21,16 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/baidu/openless/pkg/util/logs"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 
-	runtimeErr "github.com/baidu/openless/pkg/funclet/runtime/error"
+	runtimeErr "github.com/baidu/easyfaas/pkg/funclet/runtime/error"
 
-	"github.com/baidu/openless/pkg/api"
+	"github.com/baidu/easyfaas/pkg/api"
 
-	runtimeapi "github.com/baidu/openless/pkg/funclet/runtime/api"
+	runtimeapi "github.com/baidu/easyfaas/pkg/funclet/runtime/api"
 
-	"github.com/baidu/openless/pkg/funclet/runtime/cgroup"
-	"github.com/baidu/openless/pkg/util/bytefmt"
+	"github.com/baidu/easyfaas/pkg/funclet/runtime/cgroup"
+	"github.com/baidu/easyfaas/pkg/util/bytefmt"
 )
 
 type ResourceManager interface {

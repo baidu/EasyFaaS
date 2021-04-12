@@ -26,7 +26,7 @@
 ├── docs                             # 文档目录
 │   ├── func-registry.md             # stubs生成func-registry文档                        
 │   ├── development.md               # 本地开发文档
-│   ├── getting-started.md           # 使用docker-compose快速体验openless服务文档
+│   ├── getting-started.md           # 使用docker-compose快速体验easyfaas服务文档
 │   └── test.md                      # 测试文档
 ├── go.mod
 ├── go.sum
@@ -35,7 +35,7 @@
 │   ├── auth                         # 鉴权包,目前支持百度云鉴权\不鉴权两种方式，注册自定义鉴权方式
 │   ├── brn                          # brn包，提供对资源brn的解析
 │   ├── controller                   # controller组件：实现了用户流量调度以及容器池状态管理等功能
-│   ├── error                        # error包：定义通用openless服务通用error
+│   ├── error                        # error包：定义通用easyfaas服务通用error
 │   ├── funclet                      # funclet组件：实现用户工作容器的管理
 │   ├── httptrigger                  # httptrigger组件：支持http请求触发函数调用
 │   ├── repository                   # 函数代码存储组件，可注册自定义代码存储服务
@@ -51,7 +51,7 @@
     ├── funclet                      # 制作funclet镜像时所需文件   
     ├── runner-runtime               # 制作runner-runtine镜像时所需文件
     └── stubs                        # 制作local-registry stubs 镜像时所需文件
-    └── docker-compose               # 快速上手使用docker-compose跑openless服务所需脚本
+    └── docker-compose               # 快速上手使用docker-compose跑easyfaas服务所需脚本
 ```
 
 ## 2. 编译
@@ -124,7 +124,7 @@ export faasDevBin=/home/xflying/controller/code
 ### 4.2 准备runtime及runner
 准备runtime及runner
 ```shell
-$ docker run  -t -d --name runner-runtime -v ${faasPath}/runtime:/var/faas/runtime -v ${faasPath}/runner:/var/faas/runner registry.baidubce.com/openless-public/runner-runtime:ba91af
+$ docker run  -t -d --name runner-runtime -v ${faasPath}/runtime:/var/faas/runtime -v ${faasPath}/runner:/var/faas/runner registry.baidubce.com/easyfaas-public/runner-runtime:ba91af
 
 # 内存不够的开发人员，可以在容器准备完毕数据后，stop掉容器
 # 判定数据准备完毕：查看runtime日志，直到看到循环sleep为止
@@ -136,13 +136,13 @@ $ docker stop runner-runtime
 #### 4.3.1 调试funclet
 若不需要更改funclet，并只想以默认参数启动funclet，则
 ```shell
-$ docker run -t -d --privileged -v ${faasPath}:/var/faas -v ${faasPath}/invoker/run:/var/run/faas --name mini-funclet registry.baidubce.com/openless-public/mini-funclet:907546
+$ docker run -t -d --privileged -v ${faasPath}:/var/faas -v ${faasPath}/invoker/run:/var/run/faas --name mini-funclet registry.baidubce.com/easyfaas-public/mini-funclet:907546
 ```
 
 若需要更改funclet，则以bash作为init命令即可，随后进入容器进行调试
 ps : 可将自己的代码mount进容器，此处更换掉`/home/fly/funclet`即可
 ```shell
-$ docker run -t -d --privileged -v ${faasDevBin}:/home/code -v ${faasPath}:/var/faas -v ${faasPath}/invoker/run:/var/run/faas --name mini-funclet-dev  registry.baidubce.com/openless-public/mini-funclet:82b366 /bin/bash
+$ docker run -t -d --privileged -v ${faasDevBin}:/home/code -v ${faasPath}:/var/faas -v ${faasPath}/invoker/run:/var/run/faas --name mini-funclet-dev  registry.baidubce.com/easyfaas-public/mini-funclet:82b366 /bin/bash
 $ docker exec -it mini-funclet-dev /bin/bash
 $ ./funclet -v10 --logtostderr
 ```
@@ -150,14 +150,14 @@ $ ./funclet -v10 --logtostderr
 #### 4.3.2 调试controller
 若不需要更改controller，并只想以默认参数启动controller，则
 ```shell
-$ docker run -t -d -v ${faasPath}/invoker/run:/var/run/faas --name controller  regisry.baidubce.com/openless-public/controller:28a179
+$ docker run -t -d -v ${faasPath}/invoker/run:/var/run/faas --name controller  regisry.baidubce.com/easyfaas-public/controller:28a179
 ```
 
 若需要更改controller，则以sh作为init命令即可，随后进入容器进行调试
 ps : 可将自己的代码mount进容器，此处更换掉`/home/fly/controller`即可
 
 ```shell
-$ docker run -t -d -v ${faasDevBin}:/home/code -v ${faasPath}/invoker/run:/var/run/faas --name controller-dev registry.baidubce.com/openless-public/controller:28a179 sh
+$ docker run -t -d -v ${faasDevBin}:/home/code -v ${faasPath}/invoker/run:/var/run/faas --name controller-dev registry.baidubce.com/easyfaas-public/controller:28a179 sh
 $ docker exec -it controller-dev sh
 $ ./controller --port=8001 --logtostderr --repository-endpoint=http://cfc.bj.baidubce.com --repository-version="v1/ote" --repository-auth-type="bce" --repository-auth-params="{\"ak\":\"1e5abd9730754bcfb6aab8e3f1c3e6c7\", \"sk\": \"1a8d187b96f04699af506afd7e8a9048\"}" --enable-metrics -v10
 ```

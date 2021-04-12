@@ -21,10 +21,10 @@ import (
 	"io"
 	"sync"
 
-	_ "github.com/baidu/openless/pkg/userlog/json"
-	_ "github.com/baidu/openless/pkg/userlog/plain"
-	"github.com/baidu/openless/pkg/util/json"
-	"github.com/baidu/openless/pkg/util/logs"
+	_ "github.com/baidu/easyfaas/pkg/userlog/json"
+	_ "github.com/baidu/easyfaas/pkg/userlog/plain"
+	"github.com/baidu/easyfaas/pkg/util/json"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 )
 
 type statInfo struct {

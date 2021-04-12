@@ -22,7 +22,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/baidu/openless/pkg/util/logs"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 )
 
 const (
@@ -30,7 +30,7 @@ const (
 	TabByte  byte = '\t'
 	LineByte byte = '\n'
 
-	OpenlessSysLog = 0
+	easyfaasSysLog = 0
 	StdoutLog      = 1
 	StderrLog      = 2
 )

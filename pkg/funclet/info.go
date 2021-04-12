@@ -17,8 +17,8 @@
 package funclet
 
 import (
-	"github.com/baidu/openless/pkg/api"
-	"github.com/baidu/openless/pkg/funclet/runtime/runc"
+	"github.com/baidu/easyfaas/pkg/api"
+	"github.com/baidu/easyfaas/pkg/funclet/runtime/runc"
 )
 
 func (f *Funclet) ContainerInfo(ID string) (info *api.ContainerInfo, err error) {

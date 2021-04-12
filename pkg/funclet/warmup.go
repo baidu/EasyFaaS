@@ -26,15 +26,15 @@ import (
 	"syscall"
 	"time"
 
-	runtimeapi "github.com/baidu/openless/pkg/funclet/runtime/api"
+	runtimeapi "github.com/baidu/easyfaas/pkg/funclet/runtime/api"
 
 	"go.uber.org/zap"
-	"github.com/baidu/openless/pkg/api"
-	funcletCtx "github.com/baidu/openless/pkg/funclet/context"
-	"github.com/baidu/openless/pkg/funclet/file"
-	"github.com/baidu/openless/pkg/funclet/runtime/runc"
-	"github.com/baidu/openless/pkg/util/json"
-	"github.com/baidu/openless/pkg/util/strtool"
+	"github.com/baidu/easyfaas/pkg/api"
+	funcletCtx "github.com/baidu/easyfaas/pkg/funclet/context"
+	"github.com/baidu/easyfaas/pkg/funclet/file"
+	"github.com/baidu/easyfaas/pkg/funclet/runtime/runc"
+	"github.com/baidu/easyfaas/pkg/util/json"
+	"github.com/baidu/easyfaas/pkg/util/strtool"
 )
 
 const RuntimeHTTPSock = ".runtime-http.sock"

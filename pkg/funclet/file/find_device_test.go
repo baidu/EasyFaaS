@@ -20,7 +20,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/baidu/openless/pkg/util/mount"
+	"github.com/baidu/easyfaas/pkg/util/mount"
 )
 
 func TestManager_FindDevice(t *testing.T) {

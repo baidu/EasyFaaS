@@ -23,18 +23,18 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/baidu/openless/pkg/funclet/storage"
+	"github.com/baidu/easyfaas/pkg/funclet/storage"
 
-	"github.com/baidu/openless/pkg/funclet/quota"
+	"github.com/baidu/easyfaas/pkg/funclet/quota"
 
-	"github.com/baidu/openless/pkg/util/bytefmt"
+	"github.com/baidu/easyfaas/pkg/util/bytefmt"
 
-	"github.com/baidu/openless/pkg/api"
+	"github.com/baidu/easyfaas/pkg/api"
 
-	"github.com/baidu/openless/pkg/util/logs"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 
-	_ "github.com/baidu/openless/pkg/funclet/storage/hostpath"
-	_ "github.com/baidu/openless/pkg/funclet/storage/loop"
+	_ "github.com/baidu/easyfaas/pkg/funclet/storage/hostpath"
+	_ "github.com/baidu/easyfaas/pkg/funclet/storage/loop"
 )
 
 var (
