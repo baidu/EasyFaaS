@@ -21,19 +21,19 @@ import (
 	"net/http/pprof"
 	"strings"
 
-	"github.com/baidu/openless/pkg/controller/client"
+	"github.com/baidu/easyfaas/pkg/controller/client"
 
-	"github.com/baidu/openless/pkg/httptrigger"
+	"github.com/baidu/easyfaas/pkg/httptrigger"
 
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	routing "github.com/qiangxue/fasthttp-routing"
 	"github.com/valyala/fasthttp"
 	"github.com/valyala/fasthttp/fasthttpadaptor"
 
-	"github.com/baidu/openless/pkg/util/logs"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 
-	"github.com/baidu/openless/cmd/controller/options"
-	"github.com/baidu/openless/pkg/controller"
+	"github.com/baidu/easyfaas/cmd/controller/options"
+	"github.com/baidu/easyfaas/pkg/controller"
 )
 
 func Run(runOptions *options.ControllerOptions) error {

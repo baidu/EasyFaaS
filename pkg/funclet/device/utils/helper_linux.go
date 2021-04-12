@@ -16,14 +16,13 @@
  * limitations under the License.
  */
 
-
 // Package utils
 package utils
 
 import (
 	"syscall"
 
-	funletCmd "github.com/baidu/openless/pkg/funclet/command"
+	funletCmd "github.com/baidu/easyfaas/pkg/funclet/command"
 )
 
 func MkfsXfs(fileName string) error {

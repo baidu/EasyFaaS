@@ -22,8 +22,8 @@ import (
 	"strings"
 
 	"github.com/opencontainers/runtime-spec/specs-go"
-	api2 "github.com/baidu/openless/pkg/api"
-	"github.com/baidu/openless/pkg/funclet/runtime/api"
+	api2 "github.com/baidu/easyfaas/pkg/api"
+	"github.com/baidu/easyfaas/pkg/funclet/runtime/api"
 )
 
 const (

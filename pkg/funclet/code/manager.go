@@ -17,13 +17,13 @@
 package code
 
 import (
-	"github.com/baidu/openless/pkg/api"
-	"github.com/baidu/openless/pkg/funclet/context"
-	"github.com/baidu/openless/pkg/repository"
-	_ "github.com/baidu/openless/pkg/repository/bos"
-	"github.com/baidu/openless/pkg/repository/factory"
-	_ "github.com/baidu/openless/pkg/repository/filesystem"
-	"github.com/baidu/openless/pkg/util/logs"
+	"github.com/baidu/easyfaas/pkg/api"
+	"github.com/baidu/easyfaas/pkg/funclet/context"
+	"github.com/baidu/easyfaas/pkg/repository"
+	_ "github.com/baidu/easyfaas/pkg/repository/bos"
+	"github.com/baidu/easyfaas/pkg/repository/factory"
+	_ "github.com/baidu/easyfaas/pkg/repository/filesystem"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 )
 
 const (

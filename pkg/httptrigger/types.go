@@ -17,9 +17,9 @@
 package httptrigger
 
 import (
+	"github.com/baidu/easyfaas/pkg/controller/client"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 	routing "github.com/qiangxue/fasthttp-routing"
-	"github.com/baidu/openless/pkg/controller/client"
-	"github.com/baidu/openless/pkg/util/logs"
 )
 
 type Context struct {

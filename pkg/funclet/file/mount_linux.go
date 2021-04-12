@@ -21,7 +21,7 @@ package file
 import (
 	"syscall"
 
-	"github.com/baidu/openless/pkg/util/mount"
+	"github.com/baidu/easyfaas/pkg/util/mount"
 )
 
 func (m *MountManager) MakeShared(path string) error {

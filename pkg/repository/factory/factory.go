@@ -19,7 +19,7 @@ package factory
 import (
 	"fmt"
 
-	"github.com/baidu/openless/pkg/repository"
+	"github.com/baidu/easyfaas/pkg/repository"
 )
 
 var driverFactories = make(map[string]StorageDriverFactory)

@@ -24,7 +24,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/baidu/openless/pkg/util/bytefmt"
+	"github.com/baidu/easyfaas/pkg/util/bytefmt"
 )
 
 var (

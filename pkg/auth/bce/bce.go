@@ -21,10 +21,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/baidu/openless/pkg/auth"
-	"github.com/baidu/openless/pkg/auth/factory"
-	"github.com/baidu/openless/pkg/rest"
-	"github.com/baidu/openless/pkg/util/logs"
+	"github.com/baidu/easyfaas/pkg/auth"
+	"github.com/baidu/easyfaas/pkg/auth/factory"
+	"github.com/baidu/easyfaas/pkg/rest"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 )
 
 const authName = "cloud"
@@ -85,11 +85,11 @@ func NewSigner(ak, sk string) *bceSigner {
 		ignoredHeaders: rules{
 			blacklist{
 				mapRule{
-					"authorization": struct{}{},
-					"user-agent":    struct{}{},
-					"cloud-faas-uid":  struct{}{},
-					"x-auth-token":  struct{}{},
-					"app":           struct{}{},
+					"authorization":  struct{}{},
+					"user-agent":     struct{}{},
+					"cloud-faas-uid": struct{}{},
+					"x-auth-token":   struct{}{},
+					"app":            struct{}{},
 				},
 			},
 		},

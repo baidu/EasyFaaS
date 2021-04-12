@@ -76,7 +76,7 @@ func TestKunLogStatStore(t *testing.T) {
 		t.Error(err)
 		return
 	}
-	err = s.WriteFunctionLog("openless logline")
+	err = s.WriteFunctionLog("easyfaas logline")
 	if err != nil {
 		t.Error(err)
 		return

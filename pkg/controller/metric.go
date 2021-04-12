@@ -25,9 +25,9 @@ import (
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 
-	"github.com/baidu/openless/pkg/controller/rtctrl"
-	"github.com/baidu/openless/pkg/util/logs"
-	"github.com/baidu/openless/pkg/util/logs/metric"
+	"github.com/baidu/easyfaas/pkg/controller/rtctrl"
+	"github.com/baidu/easyfaas/pkg/util/logs"
+	"github.com/baidu/easyfaas/pkg/util/logs/metric"
 )
 
 const (

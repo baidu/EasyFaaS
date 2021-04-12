@@ -23,11 +23,11 @@ import (
 
 	"github.com/spf13/pflag"
 
-	"github.com/baidu/openless/cmd/controller/app"
-	"github.com/baidu/openless/cmd/controller/options"
-	"github.com/baidu/openless/pkg/util/flag"
-	"github.com/baidu/openless/pkg/util/logs"
-	"github.com/baidu/openless/pkg/version/verflag"
+	"github.com/baidu/easyfaas/cmd/controller/app"
+	"github.com/baidu/easyfaas/cmd/controller/options"
+	"github.com/baidu/easyfaas/pkg/util/flag"
+	"github.com/baidu/easyfaas/pkg/util/logs"
+	"github.com/baidu/easyfaas/pkg/version/verflag"
 )
 
 func main() {

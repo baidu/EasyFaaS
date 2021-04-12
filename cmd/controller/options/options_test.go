@@ -21,7 +21,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/baidu/openless/pkg/controller/registry"
+	"github.com/baidu/easyfaas/pkg/controller/registry"
 
 	"fmt"
 

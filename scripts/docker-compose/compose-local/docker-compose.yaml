@@ -1,7 +1,7 @@
 version: '2.0'
 services:
-  openless:
-    image: ${OPENLESS_REPO}/controller:${CONTROLLER_TAG}
+  easyfaas:
+    image: ${easyfaas_REPO}/controller:${CONTROLLER_TAG}
     network_mode: host
     command:
     - ./controller
@@ -19,7 +19,7 @@ services:
     - run:/var/run/faas
     restart: always
   funclet:
-    image: ${OPENLESS_REPO}/mini-funclet:${FUNCLET_TAG}
+    image: ${easyfaas_REPO}/mini-funclet:${FUNCLET_TAG}
     network_mode: host
     privileged: true
     command:
@@ -39,7 +39,7 @@ services:
     - data:/var/faas/runner-data
     - func:/var/faas/funcData
   runtime:
-    image: ${OPENLESS_REPO}/runner-runtime:${RUNTIME_TAG}
+    image: ${easyfaas_REPO}/runner-runtime:${RUNTIME_TAG}
     network_mode: none
     command:
     - /bin/bash
@@ -58,7 +58,7 @@ services:
       WITHJAVA8: "1"
       WITHRUNNER: "1"
   registry:
-    image: ${OPENLESS_REPO}/func-registry:${REGISTRY_TAG}
+    image: ${easyfaas_REPO}/func-registry:${REGISTRY_TAG}
     network_mode: host
     command:
     - /stubs

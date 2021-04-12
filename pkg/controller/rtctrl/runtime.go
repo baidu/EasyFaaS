@@ -30,10 +30,10 @@ import (
 	"sync"
 	"time"
 
+	innerErr "github.com/baidu/easyfaas/pkg/error"
+	"github.com/baidu/easyfaas/pkg/util/json"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 	"go.uber.org/zap"
-	innerErr "github.com/baidu/openless/pkg/error"
-	"github.com/baidu/openless/pkg/util/json"
-	"github.com/baidu/openless/pkg/util/logs"
 )
 
 var (

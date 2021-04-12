@@ -20,7 +20,7 @@ import (
 	"net/http"
 	"net/http/pprof"
 
-	"github.com/baidu/openless/pkg/server/mux"
+	"github.com/baidu/easyfaas/pkg/server/mux"
 )
 
 // Profiling adds handlers for pprof under /debug/pprof.

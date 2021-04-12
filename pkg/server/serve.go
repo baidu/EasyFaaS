@@ -23,7 +23,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/baidu/openless/pkg/util/logs"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 )
 
 const (

@@ -19,7 +19,7 @@ package filters
 import (
 	"net/http"
 
-	utilwaitgroup "github.com/baidu/openless/pkg/util/waitgroup"
+	utilwaitgroup "github.com/baidu/easyfaas/pkg/util/waitgroup"
 )
 
 // WithWaitGroup adds all non long-running requests to wait group, which is used for graceful shutdown.

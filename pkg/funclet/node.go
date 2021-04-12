@@ -18,7 +18,7 @@
 package funclet
 
 import (
-	"github.com/baidu/openless/pkg/api"
+	"github.com/baidu/easyfaas/pkg/api"
 )
 
 func (f *Funclet) NodeInfo() (info *api.FuncletNodeInfo, err error) {

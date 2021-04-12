@@ -23,11 +23,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/baidu/openless/pkg/util/id"
+	"github.com/baidu/easyfaas/pkg/util/id"
 
-	"github.com/baidu/openless/pkg/util/logs"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 
-	"github.com/baidu/openless/pkg/funclet/tmp"
+	"github.com/baidu/easyfaas/pkg/funclet/tmp"
 )
 
 func (f *Funclet) RecycleTask(stopCh <-chan struct{}) {

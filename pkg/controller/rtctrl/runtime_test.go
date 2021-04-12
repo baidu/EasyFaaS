@@ -26,13 +26,13 @@ import (
 	"testing"
 	"time"
 
-	utilID "github.com/baidu/openless/pkg/util/id"
+	utilID "github.com/baidu/easyfaas/pkg/util/id"
 
 	"github.com/aws/aws-sdk-go/service/lambda"
-	"github.com/baidu/openless/pkg/api"
-	"github.com/baidu/openless/pkg/util/logs"
+	"github.com/baidu/easyfaas/pkg/api"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 
-	kunhttptest "github.com/baidu/openless/pkg/util/httptest"
+	kunhttptest "github.com/baidu/easyfaas/pkg/util/httptest"
 )
 
 func TestSendHTTPRequestLoop(t *testing.T) {

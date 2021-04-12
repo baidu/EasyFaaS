@@ -18,10 +18,10 @@
 package runtime
 
 import (
-	"github.com/baidu/openless/pkg/funclet/runtime/api"
-	runtimeErr "github.com/baidu/openless/pkg/funclet/runtime/error"
-	"github.com/baidu/openless/pkg/funclet/runtime/runc"
-	"github.com/baidu/openless/pkg/util/logs"
+	"github.com/baidu/easyfaas/pkg/funclet/runtime/api"
+	runtimeErr "github.com/baidu/easyfaas/pkg/funclet/runtime/error"
+	"github.com/baidu/easyfaas/pkg/funclet/runtime/runc"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 )
 
 func NewContainerRuntime(runtimeType string, cmd string, logger *logs.Logger) (cm api.ContainerManager, err error) {

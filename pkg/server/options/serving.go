@@ -23,7 +23,7 @@ import (
 
 	"github.com/spf13/pflag"
 
-	"github.com/baidu/openless/pkg/server"
+	"github.com/baidu/easyfaas/pkg/server"
 )
 
 type SecureServingOptions struct {

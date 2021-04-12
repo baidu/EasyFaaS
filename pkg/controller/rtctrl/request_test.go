@@ -20,7 +20,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/baidu/openless/pkg/api"
+	"github.com/baidu/easyfaas/pkg/api"
 )
 
 func TestRequestInfo(t *testing.T) {

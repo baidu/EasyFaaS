@@ -20,11 +20,11 @@ import (
 	"errors"
 	"sync"
 
-	funcletCtx "github.com/baidu/openless/pkg/funclet/context"
+	funcletCtx "github.com/baidu/easyfaas/pkg/funclet/context"
 
-	"github.com/baidu/openless/cmd/funclet/options"
+	"github.com/baidu/easyfaas/cmd/funclet/options"
 
-	"github.com/baidu/openless/pkg/api"
+	"github.com/baidu/easyfaas/pkg/api"
 )
 
 var (

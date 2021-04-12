@@ -23,12 +23,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/baidu/openless/pkg/util/logs"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 
-	"github.com/baidu/openless/pkg/util/bytefmt"
+	"github.com/baidu/easyfaas/pkg/util/bytefmt"
 
-	"github.com/baidu/openless/pkg/api"
-	"github.com/baidu/openless/pkg/util/json"
+	"github.com/baidu/easyfaas/pkg/api"
+	"github.com/baidu/easyfaas/pkg/util/json"
 )
 
 type RuntimeDispatcher interface {
@@ -82,7 +82,7 @@ type RuntimeManager struct {
 	MaxRuntimeIdle        int
 	MaxRunnerDefunct      int
 	MaxRunnerResetTimeout int
-	rtMap                 sync.Map       // TODO: No need to add a lock for map
+	rtMap                 sync.Map // TODO: No need to add a lock for map
 	rtArray               []*RuntimeInfo
 	resource              *api.ServiceResource
 	resourceLock          sync.RWMutex

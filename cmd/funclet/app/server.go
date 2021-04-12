@@ -21,11 +21,11 @@ import (
 	"os"
 	"syscall"
 
-	"github.com/baidu/openless/cmd/funclet/options"
-	"github.com/baidu/openless/pkg/funclet"
-	genericserver "github.com/baidu/openless/pkg/server"
-	"github.com/baidu/openless/pkg/util/logs"
-	"github.com/baidu/openless/pkg/version"
+	"github.com/baidu/easyfaas/cmd/funclet/options"
+	"github.com/baidu/easyfaas/pkg/funclet"
+	genericserver "github.com/baidu/easyfaas/pkg/server"
+	"github.com/baidu/easyfaas/pkg/util/logs"
+	"github.com/baidu/easyfaas/pkg/version"
 )
 
 // Run runs the specified Funclet Server with the given Dependencies.

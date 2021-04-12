@@ -19,7 +19,7 @@ package options
 import (
 	"github.com/spf13/pflag"
 
-	"github.com/baidu/openless/pkg/server"
+	"github.com/baidu/easyfaas/pkg/server"
 )
 
 // RecommendedOptions contains the recommended options for running an API server.

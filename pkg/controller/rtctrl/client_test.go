@@ -26,11 +26,11 @@ import (
 
 	"github.com/aws/aws-sdk-go/service/lambda"
 
-	kunhttptest "github.com/baidu/openless/pkg/util/httptest"
-	"github.com/baidu/openless/pkg/util/id"
-	"github.com/baidu/openless/pkg/util/logs"
+	kunhttptest "github.com/baidu/easyfaas/pkg/util/httptest"
+	"github.com/baidu/easyfaas/pkg/util/id"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 
-	"github.com/baidu/openless/pkg/api"
+	"github.com/baidu/easyfaas/pkg/api"
 )
 
 func TestInvocation(t *testing.T) {

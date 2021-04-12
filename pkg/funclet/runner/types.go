@@ -19,7 +19,7 @@ package runner
 
 import (
 	"github.com/opencontainers/runtime-spec/specs-go"
-	"github.com/baidu/openless/pkg/funclet/runtime/api"
+	"github.com/baidu/easyfaas/pkg/funclet/runtime/api"
 )
 
 type RunnerSpec = specs.Spec

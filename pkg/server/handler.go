@@ -22,10 +22,10 @@ import (
 
 	restful "github.com/emicklei/go-restful"
 
-	"github.com/baidu/openless/pkg/util/logs"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 
-	"github.com/baidu/openless/pkg/api"
-	"github.com/baidu/openless/pkg/server/mux"
+	"github.com/baidu/easyfaas/pkg/api"
+	"github.com/baidu/easyfaas/pkg/server/mux"
 )
 
 // ServerHandler holds the different http.Handlers used by the API server.

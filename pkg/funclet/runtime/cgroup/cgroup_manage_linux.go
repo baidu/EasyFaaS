@@ -22,19 +22,19 @@ import (
 	"path"
 	"path/filepath"
 
-	"github.com/baidu/openless/pkg/api"
+	"github.com/baidu/easyfaas/pkg/api"
 
-	runtimeApi "github.com/baidu/openless/pkg/funclet/runtime/api"
+	runtimeApi "github.com/baidu/easyfaas/pkg/funclet/runtime/api"
 
 	"github.com/pkg/errors"
 
-	"github.com/baidu/openless/pkg/util/bytefmt"
+	"github.com/baidu/easyfaas/pkg/util/bytefmt"
 
 	libcontainercgroups "github.com/opencontainers/runc/libcontainer/cgroups"
 	cgroupfs "github.com/opencontainers/runc/libcontainer/cgroups/fs"
 	libcontainerconfigs "github.com/opencontainers/runc/libcontainer/configs"
 
-	"github.com/baidu/openless/pkg/util/logs"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 )
 
 // libcontainerCgroupManagerType defines how to interface with libcontainer

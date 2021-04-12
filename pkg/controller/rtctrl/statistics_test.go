@@ -21,11 +21,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/baidu/openless/pkg/util/id"
+	"github.com/baidu/easyfaas/pkg/util/id"
 
 	"github.com/aws/aws-sdk-go/service/lambda"
-	"github.com/baidu/openless/pkg/api"
-	"github.com/baidu/openless/pkg/util/logs"
+	"github.com/baidu/easyfaas/pkg/api"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 )
 
 func TestStatisticsInfo(t *testing.T) {

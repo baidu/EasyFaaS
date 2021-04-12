@@ -23,7 +23,7 @@ import (
 
 	"go.uber.org/zap/zapcore"
 
-	"github.com/baidu/openless/pkg/rest"
+	"github.com/baidu/easyfaas/pkg/rest"
 )
 
 const (

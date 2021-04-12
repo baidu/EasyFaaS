@@ -24,14 +24,14 @@ import (
 	"strings"
 	"time"
 
-	innerErr "github.com/baidu/openless/pkg/error"
+	innerErr "github.com/baidu/easyfaas/pkg/error"
 
 	routing "github.com/qiangxue/fasthttp-routing"
 
-	"github.com/baidu/openless/pkg/api"
-	"github.com/baidu/openless/pkg/util/id"
-	"github.com/baidu/openless/pkg/util/json"
-	"github.com/baidu/openless/pkg/util/logs"
+	"github.com/baidu/easyfaas/pkg/api"
+	"github.com/baidu/easyfaas/pkg/util/id"
+	"github.com/baidu/easyfaas/pkg/util/json"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 )
 
 func (controller *Controller) HealthzHandler(c *routing.Context) error {

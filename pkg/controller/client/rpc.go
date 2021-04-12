@@ -20,9 +20,9 @@ import (
 	"fmt"
 	"net/url"
 
+	"github.com/baidu/easyfaas/pkg/api"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 	"github.com/valyala/fasthttp"
-	"github.com/baidu/openless/pkg/api"
-	"github.com/baidu/openless/pkg/util/logs"
 )
 
 type ControllerClient struct {

@@ -19,8 +19,8 @@ package context
 import (
 	"go.uber.org/zap"
 
-	"github.com/baidu/openless/pkg/api"
-	"github.com/baidu/openless/pkg/util/logs"
+	"github.com/baidu/easyfaas/pkg/api"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 )
 
 type Context struct {

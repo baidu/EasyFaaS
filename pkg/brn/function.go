@@ -22,7 +22,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/baidu/openless/pkg/api"
+	"github.com/baidu/easyfaas/pkg/api"
 )
 
 var (

@@ -20,8 +20,8 @@ package factory
 import (
 	"testing"
 
-	"github.com/baidu/openless/pkg/auth"
-	"github.com/baidu/openless/pkg/rest"
+	"github.com/baidu/easyfaas/pkg/auth"
+	"github.com/baidu/easyfaas/pkg/rest"
 )
 
 func TestRegisterDuplicate(t *testing.T) {

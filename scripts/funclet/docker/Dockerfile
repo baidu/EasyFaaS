@@ -1,4 +1,4 @@
-FROM registry.baidubce.com/openless-public/ubuntu:funclet-base
+FROM registry.baidubce.com/easyfaas-public/ubuntu:funclet-base
 MAINTAINER fangliying@baidu.com
 
 COPY funclet /funclet

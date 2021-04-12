@@ -19,12 +19,12 @@ package options
 import (
 	"github.com/spf13/pflag"
 
-	"github.com/baidu/openless/pkg/api"
-	"github.com/baidu/openless/pkg/funclet/network"
-	"github.com/baidu/openless/pkg/funclet/runner"
-	"github.com/baidu/openless/pkg/funclet/runtime"
-	"github.com/baidu/openless/pkg/funclet/tmp"
-	genericoptions "github.com/baidu/openless/pkg/server/options"
+	"github.com/baidu/easyfaas/pkg/api"
+	"github.com/baidu/easyfaas/pkg/funclet/network"
+	"github.com/baidu/easyfaas/pkg/funclet/runner"
+	"github.com/baidu/easyfaas/pkg/funclet/runtime"
+	"github.com/baidu/easyfaas/pkg/funclet/tmp"
+	genericoptions "github.com/baidu/easyfaas/pkg/server/options"
 )
 
 type FuncletOptions struct {

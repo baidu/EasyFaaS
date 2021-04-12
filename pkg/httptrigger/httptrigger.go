@@ -23,12 +23,12 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/baidu/openless/cmd/httptrigger/options"
-	"github.com/baidu/openless/pkg/api"
-	"github.com/baidu/openless/pkg/brn"
-	"github.com/baidu/openless/pkg/controller/client"
-	kunErr "github.com/baidu/openless/pkg/error"
-	"github.com/baidu/openless/pkg/util/json"
+	"github.com/baidu/easyfaas/cmd/httptrigger/options"
+	"github.com/baidu/easyfaas/pkg/api"
+	"github.com/baidu/easyfaas/pkg/brn"
+	"github.com/baidu/easyfaas/pkg/controller/client"
+	kunErr "github.com/baidu/easyfaas/pkg/error"
+	"github.com/baidu/easyfaas/pkg/util/json"
 )
 
 func Init(runOptions *options.HTTPTriggerOptions) error {

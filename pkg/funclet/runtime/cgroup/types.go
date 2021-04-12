@@ -17,8 +17,8 @@
 package cgroup
 
 import (
-	"github.com/baidu/openless/pkg/api"
-	runtimeApi "github.com/baidu/openless/pkg/funclet/runtime/api"
+	"github.com/baidu/easyfaas/pkg/api"
+	runtimeApi "github.com/baidu/easyfaas/pkg/funclet/runtime/api"
 )
 
 const (

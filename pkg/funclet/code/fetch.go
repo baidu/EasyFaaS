@@ -17,9 +17,9 @@
 package code
 
 import (
-	"github.com/baidu/openless/pkg/api"
-	"github.com/baidu/openless/pkg/funclet/context"
-	"github.com/baidu/openless/pkg/repository"
+	"github.com/baidu/easyfaas/pkg/api"
+	"github.com/baidu/easyfaas/pkg/funclet/context"
+	"github.com/baidu/easyfaas/pkg/repository"
 )
 
 // FetchCode

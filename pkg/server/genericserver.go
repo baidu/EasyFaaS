@@ -24,8 +24,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/baidu/openless/pkg/server/healthz"
-	utilwaitgroup "github.com/baidu/openless/pkg/util/waitgroup"
+	"github.com/baidu/easyfaas/pkg/server/healthz"
+	utilwaitgroup "github.com/baidu/easyfaas/pkg/util/waitgroup"
 )
 
 // GenericServer contains state for a faas api server.

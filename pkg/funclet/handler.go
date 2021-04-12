@@ -20,16 +20,16 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/baidu/openless/pkg/util/id"
+	"github.com/baidu/easyfaas/pkg/util/id"
 
 	"github.com/emicklei/go-restful"
 
-	"github.com/baidu/openless/pkg/api"
-	svcErr "github.com/baidu/openless/pkg/error"
-	funcletCtx "github.com/baidu/openless/pkg/funclet/context"
-	"github.com/baidu/openless/pkg/server"
-	"github.com/baidu/openless/pkg/server/endpoint"
-	"github.com/baidu/openless/pkg/util/logs"
+	"github.com/baidu/easyfaas/pkg/api"
+	svcErr "github.com/baidu/easyfaas/pkg/error"
+	funcletCtx "github.com/baidu/easyfaas/pkg/funclet/context"
+	"github.com/baidu/easyfaas/pkg/server"
+	"github.com/baidu/easyfaas/pkg/server/endpoint"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 )
 
 func (f *Funclet) NewContext(requestID string, logger *logs.Logger) *funcletCtx.Context {

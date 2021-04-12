@@ -22,9 +22,9 @@ import (
 	"sync"
 	"time"
 
-	kunErr "github.com/baidu/openless/pkg/error"
-	"github.com/baidu/openless/pkg/util/json"
-	"github.com/baidu/openless/pkg/util/logs"
+	kunErr "github.com/baidu/easyfaas/pkg/error"
+	"github.com/baidu/easyfaas/pkg/util/json"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 )
 
 var errConnKilled = fmt.Errorf("kill connection/stream")

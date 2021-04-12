@@ -26,8 +26,8 @@ import (
 
 	"github.com/spf13/pflag"
 
-	"github.com/baidu/openless/pkg/api"
-	"github.com/baidu/openless/pkg/rest"
+	"github.com/baidu/easyfaas/pkg/api"
+	"github.com/baidu/easyfaas/pkg/rest"
 )
 
 const DefaultFuncletApiSocket = "/var/run/faas/.funcletapi.sock"

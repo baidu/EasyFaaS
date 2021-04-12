@@ -21,7 +21,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/baidu/openless/pkg/util/bytefmt"
+	"github.com/baidu/easyfaas/pkg/util/bytefmt"
 )
 
 func TestEventOccupy(t *testing.T) {

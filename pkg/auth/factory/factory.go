@@ -19,7 +19,7 @@ package factory
 import (
 	"fmt"
 
-	"github.com/baidu/openless/pkg/auth"
+	"github.com/baidu/easyfaas/pkg/auth"
 )
 
 var authFactories = make(map[string]AuthFactory)

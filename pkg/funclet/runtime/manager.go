@@ -18,8 +18,8 @@
 package runtime
 
 import (
-	"github.com/baidu/openless/pkg/funclet/runtime/api"
-	"github.com/baidu/openless/pkg/util/logs"
+	"github.com/baidu/easyfaas/pkg/funclet/runtime/api"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 )
 
 type RuntimeManagerInterface interface {

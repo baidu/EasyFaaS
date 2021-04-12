@@ -24,12 +24,12 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/baidu/openless/pkg/api"
-	funcletCtx "github.com/baidu/openless/pkg/funclet/context"
-	"github.com/baidu/openless/pkg/funclet/file"
-	"github.com/baidu/openless/pkg/funclet/runner"
-	runtimeapi "github.com/baidu/openless/pkg/funclet/runtime/api"
-	"github.com/baidu/openless/pkg/util/logs"
+	"github.com/baidu/easyfaas/pkg/api"
+	funcletCtx "github.com/baidu/easyfaas/pkg/funclet/context"
+	"github.com/baidu/easyfaas/pkg/funclet/file"
+	"github.com/baidu/easyfaas/pkg/funclet/runner"
+	runtimeapi "github.com/baidu/easyfaas/pkg/funclet/runtime/api"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 )
 
 func (f *Funclet) InitContainerEvent(containerID string) (err error) {

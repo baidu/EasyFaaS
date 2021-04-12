@@ -17,7 +17,7 @@
 // Package api
 package api
 
-import "github.com/baidu/openless/pkg/api"
+import "github.com/baidu/easyfaas/pkg/api"
 
 type ResourceParams struct {
 	MemLimits   string

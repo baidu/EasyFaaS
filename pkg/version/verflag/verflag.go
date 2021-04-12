@@ -25,7 +25,7 @@ import (
 
 	flag "github.com/spf13/pflag"
 
-	"github.com/baidu/openless/pkg/version"
+	"github.com/baidu/easyfaas/pkg/version"
 )
 
 type versionValue int

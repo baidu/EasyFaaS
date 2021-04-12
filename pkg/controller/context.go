@@ -17,11 +17,11 @@
 package controller
 
 import (
-	"github.com/baidu/openless/cmd/controller/options"
-	"github.com/baidu/openless/pkg/api"
-	"github.com/baidu/openless/pkg/brn"
-	"github.com/baidu/openless/pkg/controller/rtctrl"
-	"github.com/baidu/openless/pkg/util/logs"
+	"github.com/baidu/easyfaas/cmd/controller/options"
+	"github.com/baidu/easyfaas/pkg/api"
+	"github.com/baidu/easyfaas/pkg/brn"
+	"github.com/baidu/easyfaas/pkg/controller/rtctrl"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 )
 
 type InvokeContext struct {

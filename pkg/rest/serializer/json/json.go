@@ -19,7 +19,7 @@ package json
 import (
 	"io"
 
-	"github.com/baidu/openless/pkg/util/json"
+	"github.com/baidu/easyfaas/pkg/util/json"
 )
 
 // Serializer xxx

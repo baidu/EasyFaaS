@@ -17,9 +17,9 @@
 package funclet
 
 import (
-	"github.com/baidu/openless/pkg/api"
-	runtimeapi "github.com/baidu/openless/pkg/funclet/runtime/api"
-	"github.com/baidu/openless/pkg/funclet/runtime/runc"
+	"github.com/baidu/easyfaas/pkg/api"
+	runtimeapi "github.com/baidu/easyfaas/pkg/funclet/runtime/api"
+	"github.com/baidu/easyfaas/pkg/funclet/runtime/runc"
 )
 
 func (f *Funclet) List(criteria *api.ListContainerCriteria) (list []*api.ContainerInfo, err error) {

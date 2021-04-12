@@ -25,17 +25,17 @@ import (
 	"os"
 	"testing"
 
+	"github.com/baidu/easyfaas/pkg/api"
+	"github.com/baidu/easyfaas/pkg/util/flag"
 	"github.com/pkg/errors"
 	"github.com/spf13/pflag"
-	"github.com/baidu/openless/pkg/api"
-	"github.com/baidu/openless/pkg/util/flag"
 
 	"github.com/gorilla/mux"
 )
 
 const ServerHost = "http://127.0.0.1:7777"
 const OtherServerHost = "http://127.0.0.1:7788"
-const ErrorServerHost = "http:/%%a.openless.com/just/a/path"
+const ErrorServerHost = "http:/%%a.easyfaas.com/just/a/path"
 
 func TestNewControllerClient(t *testing.T) {
 	ds := []struct {

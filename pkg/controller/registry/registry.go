@@ -22,15 +22,15 @@ import (
 	"strings"
 	"time"
 
-	innerErr "github.com/baidu/openless/pkg/error"
+	innerErr "github.com/baidu/easyfaas/pkg/error"
 
-	"github.com/baidu/openless/pkg/api"
-	"github.com/baidu/openless/pkg/auth"
-	_ "github.com/baidu/openless/pkg/auth/bce"
-	"github.com/baidu/openless/pkg/auth/factory"
-	_ "github.com/baidu/openless/pkg/auth/noauth"
-	"github.com/baidu/openless/pkg/rest"
-	"github.com/baidu/openless/pkg/util/json"
+	"github.com/baidu/easyfaas/pkg/api"
+	"github.com/baidu/easyfaas/pkg/auth"
+	_ "github.com/baidu/easyfaas/pkg/auth/bce"
+	"github.com/baidu/easyfaas/pkg/auth/factory"
+	_ "github.com/baidu/easyfaas/pkg/auth/noauth"
+	"github.com/baidu/easyfaas/pkg/rest"
+	"github.com/baidu/easyfaas/pkg/util/json"
 )
 
 type Registry interface {

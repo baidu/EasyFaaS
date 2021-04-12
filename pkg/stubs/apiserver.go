@@ -29,11 +29,11 @@ import (
 	"github.com/aws/aws-sdk-go/service/lambda"
 	routing "github.com/qiangxue/fasthttp-routing"
 
-	"github.com/baidu/openless/cmd/stubs/options"
-	"github.com/baidu/openless/pkg/api"
-	"github.com/baidu/openless/pkg/brn"
-	"github.com/baidu/openless/pkg/util/json"
-	"github.com/baidu/openless/pkg/util/logs"
+	"github.com/baidu/easyfaas/cmd/stubs/options"
+	"github.com/baidu/easyfaas/pkg/api"
+	"github.com/baidu/easyfaas/pkg/brn"
+	"github.com/baidu/easyfaas/pkg/util/json"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 )
 
 var functionUid = "df391b08c64c426a81645468c75163a5"
@@ -108,7 +108,7 @@ func GetFunctionHandler(options *options.StubsOptions) routing.Handler {
 		logs.Infof("get function %s", functionBrn)
 		accountID := string(c.Request.Header.Peek(api.HeaderXAccountID))
 		if accountID == "" {
-			 accountID = functionUid
+			accountID = functionUid
 		}
 		hashedAccountID := brn.Md5BceUid(accountID)
 		functionName, version, _, err := brn.DealFName(hashedAccountID, functionBrn)

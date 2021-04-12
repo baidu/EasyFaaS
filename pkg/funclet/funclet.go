@@ -21,20 +21,20 @@ import (
 	"os"
 	"time"
 
-	"github.com/baidu/openless/pkg/funclet/runtime"
+	"github.com/baidu/easyfaas/pkg/funclet/runtime"
 
-	"github.com/baidu/openless/pkg/funclet/runner"
+	"github.com/baidu/easyfaas/pkg/funclet/runner"
 
-	"github.com/baidu/openless/pkg/funclet/tmp"
+	"github.com/baidu/easyfaas/pkg/funclet/tmp"
 
-	"github.com/baidu/openless/cmd/funclet/options"
-	"github.com/baidu/openless/pkg/funclet/file"
+	"github.com/baidu/easyfaas/cmd/funclet/options"
+	"github.com/baidu/easyfaas/pkg/funclet/file"
 
-	"github.com/baidu/openless/pkg/api"
-	"github.com/baidu/openless/pkg/funclet/code"
-	funcletCtx "github.com/baidu/openless/pkg/funclet/context"
-	"github.com/baidu/openless/pkg/funclet/network"
-	"github.com/baidu/openless/pkg/util/logs"
+	"github.com/baidu/easyfaas/pkg/api"
+	"github.com/baidu/easyfaas/pkg/funclet/code"
+	funcletCtx "github.com/baidu/easyfaas/pkg/funclet/context"
+	"github.com/baidu/easyfaas/pkg/funclet/network"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 )
 
 // Funclet

@@ -18,10 +18,10 @@
 package controller
 
 import (
-	"github.com/baidu/openless/cmd/controller/options"
-	"github.com/baidu/openless/pkg/funclet/client"
-	"github.com/baidu/openless/pkg/controller/function"
-	"github.com/baidu/openless/pkg/controller/rtctrl"
+	"github.com/baidu/easyfaas/cmd/controller/options"
+	"github.com/baidu/easyfaas/pkg/controller/function"
+	"github.com/baidu/easyfaas/pkg/controller/rtctrl"
+	"github.com/baidu/easyfaas/pkg/funclet/client"
 )
 
 type Controller struct {

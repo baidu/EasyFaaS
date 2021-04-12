@@ -68,14 +68,14 @@ elif [ "x$REGISTRY_ENV" = "xtest" ]; then
     else
         CONFIG=$DOCKER_CONFIG_TEST
     fi
-    REGISTRY="registry.baidubce.com/openless-dev/"
+    REGISTRY="registry.baidubce.com/easyfaas-dev/"
 else
     if [ -z $DOCKER_CONFIG_ONLINE ]; then
         CONFIG="~/baidu/docker/config/online"
     else
         CONFIG=$DOCKER_CONFIG_ONLINE
     fi
-    REGISTRY="registry.baidubce.com/openless/"
+    REGISTRY="registry.baidubce.com/easyfaas/"
 fi
 
 VCS_REF=$(git rev-parse --short HEAD)
@@ -102,7 +102,7 @@ BASEDIR="$(pwd)"
 PROJ_NAME=""
 
 if [[ "x$WITHBUILD" == "x1" ]]; then
-    docker run -v $BASEDIR:/go/src/$PROJ_NAME  --rm registry.baidubce.com/openless-public/golang-build:v1.0 \
+    docker run -v $BASEDIR:/go/src/$PROJ_NAME  --rm registry.baidubce.com/easyfaas-public/golang-build:v1.0 \
     bash -c "go env -w GO111MODULE='on' \\
     && go env -w GONOPROXY=\*\*.baidu.com\*\*  \\
     && go env -w GONOSUMDB=\* \\

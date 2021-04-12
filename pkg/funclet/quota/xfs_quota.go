@@ -27,13 +27,13 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/baidu/openless/pkg/funclet/storage"
+	"github.com/baidu/easyfaas/pkg/funclet/storage"
 
-	"github.com/baidu/openless/pkg/util/file"
+	"github.com/baidu/easyfaas/pkg/util/file"
 
-	funletCmd "github.com/baidu/openless/pkg/funclet/command"
+	funletCmd "github.com/baidu/easyfaas/pkg/funclet/command"
 
-	"github.com/baidu/openless/pkg/util/logs"
+	"github.com/baidu/easyfaas/pkg/util/logs"
 )
 
 var (
