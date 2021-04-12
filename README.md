@@ -116,13 +116,9 @@ issues贡献： 如在使用中遇到问题，请在 https://github.com/baidu/ea
 
 
 ## 维护者
-- [郑然](https://github.com/elithnever)
-- [房丽颖](https://github.com/flyingfang)
-- [史南胜](https://github.com/sns1988)
-- [邢龙胜](https://github.com/xinglsh6937)
-- [何守芬](https://github.com/sunshineing)
-- [吴红霞](https://github.com/smilewhxlucky)
-
+- [郑同学](https://github.com/elithnever)
+- [房同学](https://github.com/flyingfang)
+- [史同学](https://github.com/sns1988)
 
 
 ## 版本更新
