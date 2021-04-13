@@ -1,6 +1,6 @@
 # EasyFaaS
 [![License](https://img.shields.io/badge/Licence-Apache%202.0-blue.svg?style=flat-square)](http://www.apache.org/licenses/LICENSE-2.0.html)
-
+[![Build Status](https://travis-ci.org/baidu/EasyFaaS.svg?branch=main)](https://travis-ci.org/github/baidu/EasyFaaS)
 
 
 ## 简介
@@ -122,8 +122,7 @@ issues贡献： 如在使用中遇到问题，请在 https://github.com/baidu/Ea
 
 
 ## 版本更新
-- 1.0.0 
-- 第一版发布，具备常用的函数管控、容器管理和调度、事件机制等功能；
+- 1.0.0 EasyFaaS第一版发布，具备常用的函数管控、容器管理和调度、事件机制等功能；
 
 
 ## 讨论
