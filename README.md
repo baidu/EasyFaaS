@@ -1,6 +1,5 @@
 # EasyFaaS
 [![License](https://img.shields.io/badge/Licence-Apache%202.0-blue.svg?style=flat-square)](http://www.apache.org/licenses/LICENSE-2.0.html)
-[![Build Status](https://travis-ci.org/baidu/EasyFaaS.svg?branch=main)](https://travis-ci.org/github/baidu/EasyFaaS)
 
 
 ## 简介
