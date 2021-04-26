@@ -78,7 +78,7 @@ export faasPath=/<your_path_prefix>/easyfaas/faas
 docker run -td -e WITHRUNNER=1 -e WITHNODEJS10=1  -e WITHNODEJS12=1 -e WITHPYTHON3=1 --name runner-runtime -v ${faasPath}/runtime:/var/faas/runtime -v ${faasPath}/runner:/var/faas/runner registry.baidubce.com/easyfaas-public/runner-runtime:demo1.0
 
 # 启动all-in-one服务
-docker run -td --privileged -v ${faasPath}/runner:/var/faas/runner -v ${faasPath}/runtime:/var/faas/runtime -v ${faasPath}/data:/var/faas/runner-data --name easyfaas registry.baidubce.com/easyfaas/all-in-one:demo1.0
+docker run -td --privileged -v ${faasPath}/runner:/var/faas/runner -v ${faasPath}/runtime:/var/faas/runtime -v ${faasPath}/data:/var/faas/runner-data --name easyfaas registry.baidubce.com/easyfaas-public/all-in-one:demo1.0
 ```
 
 ## 5. 操作运行
