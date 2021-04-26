@@ -1,20 +1,16 @@
 language: go
 go_import_path: github.com/baidu/easyfaas
 
-sudo: false
+sudo: true
 
 go:
   - 1.16
 
-before_install:
-  - go get -v honnef.co/go/tools/...
-  - go get -v github.com/kisielk/errcheck
-
 script:
-  - make fmt
+  - echo "start to build and test easyfaas"
   - make test
-  - make race
-# - make errcheck
+  - make
+  - echo "finish"
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
