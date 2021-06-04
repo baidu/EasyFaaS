@@ -20,7 +20,7 @@ services:
     restart: always
   funclet:
     image: ${easyfaas_REPO}/mini-funclet:${FUNCLET_TAG}
-    network_mode: host
+    network_mode: bridge
     privileged: true
     command:
     - ./funclet
