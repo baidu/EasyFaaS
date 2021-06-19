@@ -216,18 +216,18 @@ type InvokeType = string
 
 const (
 	InvokeTypeCommon      InvokeType = "common"
-	InvokeTypeEvent                  = "event"
-	InvokeTypeStream                 = "stream"
-	InvokeTypeHttpTrigger            = "httpTrigger"
-	InvokeTypeMqhub                  = "mqhub"
+	InvokeTypeEvent       InvokeType = "event"
+	InvokeTypeStream      InvokeType = "stream"
+	InvokeTypeHttpTrigger InvokeType = "httpTrigger"
+	InvokeTypeMqhub       InvokeType = "mqhub"
 )
 
 type TriggerType = string
 
 const (
 	TriggerTypeHTTP    TriggerType = "faas-http-trigger"
-	TriggerTypeCrontab             = "faas-crontab-trigger"
-	TriggerTypeKafka               = "kafka"
-	TriggerTypeVscode              = "vscode"
-	TriggerTypeGeneric             = "generic"
+	TriggerTypeCrontab TriggerType = "faas-crontab-trigger"
+	TriggerTypeKafka   TriggerType = "kafka"
+	TriggerTypeVscode  TriggerType = "vscode"
+	TriggerTypeGeneric TriggerType = "generic"
 )

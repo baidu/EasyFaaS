@@ -103,7 +103,7 @@ func StreamSingleZip(sourceName string, data []byte) ([]byte, error) {
 		zipWriter.Close()
 		return nil, err
 	}
-	writer.Write(data)
+	_, err = writer.Write(data)
 
 	if err != nil {
 		zipWriter.Close()

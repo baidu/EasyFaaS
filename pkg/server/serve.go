@@ -61,9 +61,9 @@ func RunServer(server *http.Server, ln net.Listener, shutDownTimeout time.Durati
 
 	go func() {
 		var listener net.Listener
-		switch ln.(type) {
+		switch ln := ln.(type) {
 		case *net.TCPListener:
-			listener = tcpKeepAliveListener{ln.(*net.TCPListener)}
+			listener = tcpKeepAliveListener{ln}
 		default:
 			listener = ln
 		}
