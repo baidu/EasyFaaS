@@ -37,14 +37,6 @@ import (
 	"github.com/baidu/easyfaas/pkg/util/logs"
 )
 
-// libcontainerCgroupManagerType defines how to interface with libcontainer
-type libcontainerCgroupManagerType string
-
-const (
-	// libcontainerCgroupfs means use libcontainer with cgroupfs
-	libcontainerCgroupfs libcontainerCgroupManagerType = "cgroupfs"
-)
-
 // libcontainerAdapter provides a simplified interface to libcontainer based on libcontainer type.
 type libcontainerAdapter struct {
 	// cgroupManagerType defines how to interface with libcontainer
@@ -61,10 +53,8 @@ func newLibcontainerAdapter(cgroupManagerType libcontainerCgroupManagerType) *li
 func (l *libcontainerAdapter) newManager(cgroups *libcontainerconfigs.Cgroup, paths map[string]string) (libcontainercgroups.Manager, error) {
 	switch l.cgroupManagerType {
 	case libcontainerCgroupfs:
-		return &cgroupfs.Manager{
-			Cgroups: cgroups,
-			Paths:   paths,
-		}, nil
+		mgr := cgroupfs.NewManager(cgroups, paths, false)
+		return mgr, nil
 	}
 	return nil, fmt.Errorf("invalid cgroup manager configuration")
 }
@@ -263,7 +253,7 @@ type subsystem interface {
 	// Name returns the name of the subsystem.
 	Name() string
 	// Set the cgroup represented by cgroup.
-	Set(path string, cgroup *libcontainerconfigs.Cgroup) error
+	Set(path string, cgroup *libcontainerconfigs.Resources) error
 	// GetStats returns the statistics associated with the cgroup
 	GetStats(path string, stats *libcontainercgroups.Stats) error
 }
@@ -290,7 +280,7 @@ func setSupportedSubsystems(cgroupConfig *libcontainerconfigs.Cgroup) error {
 		if _, ok := cgroupConfig.Paths[sys.Name()]; !ok {
 			return fmt.Errorf("Failed to find subsytem mount for subsytem: %v", sys.Name())
 		}
-		if err := sys.Set(cgroupConfig.Paths[sys.Name()], cgroupConfig); err != nil {
+		if err := sys.Set(cgroupConfig.Paths[sys.Name()], cgroupConfig.Resources); err != nil {
 			return fmt.Errorf("Failed to set config for supported subsystems : %v", err)
 		}
 	}
@@ -334,7 +324,6 @@ func (m *cgroupManagerImpl) Update(cgroupConfig *CgroupConfig) error {
 	resources := m.toResources(resourceConfig)
 
 	cgroupPaths := m.buildCgroupPaths(cgroupConfig.Name)
-
 	// we take the location in traditional cgroupfs format.
 	abstractCgroupFsName := string(cgroupConfig.Name)
 	abstractParent := CgroupName(path.Dir(abstractCgroupFsName))

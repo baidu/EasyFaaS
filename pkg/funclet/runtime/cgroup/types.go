@@ -46,6 +46,14 @@ const (
 	MemoryLimitsFile = "memory.limit_in_bytes"
 )
 
+// libcontainerCgroupManagerType defines how to interface with libcontainer
+type libcontainerCgroupManagerType string
+
+const (
+	// libcontainerCgroupfs means use libcontainer with cgroupfs
+	libcontainerCgroupfs libcontainerCgroupManagerType = "cgroupfs"
+)
+
 // CgroupName is the abstract name of a cgroup prior to any driver specific conversion.
 type CgroupName string
 
