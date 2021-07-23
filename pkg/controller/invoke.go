@@ -483,7 +483,7 @@ func build(ctx *InvokeContext, funcError, payload string, logMessage []string) (
 		ctx.Response.SetHeader(api.XBceFunctionError, funcError)
 	}
 
-	if logMessage != nil && len(logMessage) > 0 {
+	if len(logMessage) > 0 {
 		logResult := base64.StdEncoding.EncodeToString([]byte(strings.Join(logMessage, "")))
 		ctx.Response.SetHeader(api.HeaderLogResult, logResult)
 	}

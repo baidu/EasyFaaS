@@ -188,7 +188,7 @@ func requestBodyString(ctx *ProxyContext) *string {
 }
 
 func requestBody(ctx *ProxyContext) *api.ProxyRequest {
-	request := ctx.RouteCtx.Request
+	request := &ctx.RouteCtx.Request
 	header := map[string]string{}
 	request.Header.VisitAll(func(k, v []byte) {
 		header[string(k)] = string(v)
