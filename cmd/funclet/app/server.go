@@ -30,10 +30,10 @@ import (
 
 // Run runs the specified Funclet Server with the given Dependencies.
 // This should never exit.
-func Run(runOptions *options.FuncletOptions, stopCh <-chan struct{}) error {
+func Run(runOptions *options.FuncletOptions, stopCh <-chan struct{}, finishCh chan struct{}) error {
 	logs.Infof("Version: %+v", version.Get())
 
-	s, err := CreateUnixServerChain(runOptions, stopCh)
+	s, err := CreateUnixServerChain(runOptions, stopCh, finishCh)
 	if err != nil {
 		return err
 	}
@@ -41,7 +41,7 @@ func Run(runOptions *options.FuncletOptions, stopCh <-chan struct{}) error {
 	return s.PrepareRun().Run(stopCh)
 }
 
-func CreateUnixServerChain(runOptions *options.FuncletOptions, stopCh <-chan struct{}) (*genericserver.GenericServer, error) {
+func CreateUnixServerChain(runOptions *options.FuncletOptions, stopCh <-chan struct{}, finishCh chan struct{}) (*genericserver.GenericServer, error) {
 	config := genericserver.NewRecommendedConfig()
 	if err := runOptions.RecommendedOptions.ApplyTo(config); err != nil {
 		return nil, err
@@ -54,7 +54,7 @@ func CreateUnixServerChain(runOptions *options.FuncletOptions, stopCh <-chan str
 	// funclet needs to prepare the directory for user containers
 	// lift the restrictions of the new file's permissions
 	syscall.Umask(0)
-	f, err := funclet.InitFunclet(runOptions, stopCh)
+	f, err := funclet.InitFunclet(runOptions, stopCh, finishCh)
 	if err != nil {
 		return nil, err
 	}

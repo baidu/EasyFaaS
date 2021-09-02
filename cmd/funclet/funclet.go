@@ -21,6 +21,7 @@ import (
 	"os"
 	"os/signal"
 	"syscall"
+	"time"
 
 	"github.com/spf13/pflag"
 
@@ -40,19 +41,28 @@ func main() {
 	defer logs.FlushLogs()
 
 	verflag.PrintAndExitIfRequested()
-	stopCh := SetupSignalHandler()
-	if err := app.Run(s, stopCh); err != nil {
+	stopCh, finishCh := SetupSignalHandler()
+	if err := app.Run(s, stopCh, finishCh); err != nil {
 		fmt.Fprintf(os.Stderr, "%v\n", err)
 		os.Exit(1)
 	}
 }
 
-func SetupSignalHandler() <-chan struct{} {
+func SetupSignalHandler() (<-chan struct{}, chan struct{}) {
 	stop := make(chan struct{})
+	finishCh := make(chan struct{})
 	sigc := make(chan os.Signal, 2048)
 	signal.Notify(sigc, syscall.SIGINT, syscall.SIGTERM, syscall.SIGCHLD)
+	var exit bool
 	go func() {
-		var exit bool
+		for {
+			select {
+			case <-finishCh:
+				exit = true
+			}
+		}
+	}()
+	go func() {
 		for {
 			s := <-sigc
 			logs.Debugf("got signal %s\n", s.String())
@@ -79,7 +89,14 @@ func SetupSignalHandler() <-chan struct{} {
 			case syscall.SIGINT, syscall.SIGTERM:
 				if !exit {
 					close(stop)
-					exit = true
+					// grace shutdown timeout with 10 min
+					timer := time.NewTimer(10 * time.Minute)
+					go func() {
+						select {
+						case <-timer.C:
+							exit = true
+						}
+					}()
 				} else {
 					os.Exit(1)
 				}
@@ -87,5 +104,5 @@ func SetupSignalHandler() <-chan struct{} {
 		}
 	}()
 
-	return stop
+	return stop, finishCh
 }

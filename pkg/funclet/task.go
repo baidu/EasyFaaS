@@ -30,7 +30,7 @@ import (
 	"github.com/baidu/easyfaas/pkg/funclet/tmp"
 )
 
-func (f *Funclet) RecycleTask(stopCh <-chan struct{}) {
+func (f *Funclet) RecycleTask(stopCh <-chan struct{},  finishCh chan struct{}) {
 	ticker := time.NewTicker(30 * time.Second)
 	defer ticker.Stop()
 	for {

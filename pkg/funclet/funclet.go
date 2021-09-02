@@ -54,7 +54,7 @@ type Funclet struct {
 	HandlingChanMap *HandlingChanMap
 }
 
-func InitFunclet(o *options.FuncletOptions, stopCh <-chan struct{}) (f *Funclet, err error) {
+func InitFunclet(o *options.FuncletOptions, stopCh <-chan struct{},finishCh chan struct{}) (f *Funclet, err error) {
 	logger := logs.NewLogger()
 	podName := os.Getenv("MY_POD_NAME")
 	if podName == "" {
@@ -121,7 +121,7 @@ func InitFunclet(o *options.FuncletOptions, stopCh <-chan struct{}) (f *Funclet,
 	// init container map
 	f.InitAllContainers()
 
-	go f.RecycleTask(stopCh)
+	go f.RecycleTask(stopCh,finishCh)
 
 	return f, nil
 }
