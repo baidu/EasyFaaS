@@ -65,7 +65,7 @@ EasyFaaS是一个依赖轻、适配性强、资源占用少、无状态且高性
 
 ### 架构图
 
-![faaster_arch](docs/imgs/faaster_arch.JPG)
+![faaster_arch](docs/imgs/openless_arch.JPG)
 EasyFaaS以单Pod为最小服务单位，每个Pod中包含3个容器，分别为controller、funclet和runner-runtime。其中runner-runtime仅为init容器，准备必要的资源后即退出。
 
 ### 模块说明
