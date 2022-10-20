@@ -18,6 +18,7 @@ package api
 
 import (
 	"io"
+	"net/url"
 	"strings"
 )
 
@@ -29,12 +30,16 @@ type InvokeRequest struct {
 	FunctionName   string
 	Qualifier      string
 	FunctionBRN    string
+	Queries        url.Values
+	Headers        InvokeHeaders
 	Body           *string
 	BodyStream     io.ReadWriter
 	WithBodyStream bool
 	LogToBody      bool
 	LogType        LogType
 	RequestID      string
+	InvokeType     string
+	TriggerType    string
 }
 
 type InvokeResponse struct {
@@ -98,6 +103,21 @@ func (iresp *InvokeResponse) StatusCode() int {
 
 func (iresp *InvokeResponse) SetStatusCode(c int) {
 	iresp.code = c
+}
+
+type InvokeHeaders map[string]string
+
+func (h InvokeHeaders) Set(k, v string) {
+	if h == nil {
+		h = make(map[string]string, 0)
+	}
+	h[k] = v
+}
+func (h InvokeHeaders) Get(k string) string {
+	if res, ok := h[k]; ok {
+		return res
+	}
+	return ""
 }
 
 type InvokeProxyRequest struct {
